@@ -1,0 +1,11 @@
+/* About */
+  Everything: Bagus Nuryasin
+  Github: @szczynk atau @sanguinary-bus
+
+/* SITE */
+  Last update: 2021/12/21
+  Standards: HTML5, CSS3, Javascript
+  Components: VueJs
+  Software: NuxtJs
+  Language: English/Indonesian
+  Doctype: HTML5

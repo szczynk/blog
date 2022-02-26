@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://szczynk.github.io/blog/sitemap.xml
