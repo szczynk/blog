@@ -1,0 +1,52 @@
+{
+  "name": "szczynk.github.io-blog",
+  "version": "1.0.0",
+  "description": "My personal blog about anything that i need to talk.",
+  "author": "szczynk",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "build:analyze": "nuxt build --analyze",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "pushdir": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy": "npm run generate && npm run pushdir"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "core-js": "^3.21.1",
+    "nuxt": "^2.15.7",
+    "nuxt-precompress": "^0.5.9",
+    "sanitize-html": "^2.7.0",
+    "vue-lazyload": "^1.3.3"
+  },
+  "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "lqip-loader": "^2.2.1",
+    "postcss": "^8.4.7",
+    "prettier": "^2.3.2",
+    "push-dir": "^0.4.1",
+    "tailwindcss": "^3.0.23"
+  }
+}
