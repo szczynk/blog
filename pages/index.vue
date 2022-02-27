@@ -57,6 +57,7 @@ export default {
     const allBlogs = await $content(params.slug)
       .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
       .sortBy('createdAt', 'desc')
+      .limit(20)
       .fetch()
 
     const techBlogs = await $content(params.slug)
@@ -95,6 +96,98 @@ export default {
     return {
       activeTab: 'All',
     }
+  },
+  head() {
+    const baseUrl = 'https://szczynk.github.io'
+    const url = 'https://szczynk.github.io/blog/'
+
+    const coverImage = require('@/assets/img/introduction.png')
+
+    const description = 'My personal blog about anything that i need to talk.'
+
+    const structuredData = {
+      '@context': 'https://schema.org/',
+      '@type': 'WebSite',
+      name: 'Szczynk Blog',
+      url: 'https://szczynk.github.io/blog/',
+      description,
+      image: baseUrl + coverImage,
+      author: {
+        '@type': 'Person',
+        name: 'szczynk',
+        url: 'https://szczynk.github.io/resume/',
+      },
+    }
+
+    const head = {
+      link: [
+        {
+          rel: 'canonical',
+          href: url,
+        },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          json: structuredData,
+        },
+      ],
+      meta: [],
+    }
+
+    const metaTags = [
+      // Global
+      { name: 'author', content: 'szczynk' },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: 'Szczynk Blog',
+      },
+
+      // Facebook & LinkedIn
+      { property: 'og:title', content: 'Szczynk Blog' },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: url },
+      { property: 'og:image', content: baseUrl + coverImage },
+      { property: 'og:image:width', content: 1200 },
+      { property: 'og:image:height', content: 638 },
+      { property: 'og:locale', content: 'en' },
+      {
+        property: 'og:site_name',
+        content: 'Szczynk Blog',
+      },
+
+      // Twitter
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@szczynk' },
+      { name: 'twitter:creator', content: '@szczynk' },
+      { name: 'twitter:title', content: 'Szczynk Blog' },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: baseUrl + coverImage },
+      { name: 'twitter:image:width', content: 1200 },
+      { name: 'twitter:image:height', content: 638 },
+    ]
+
+    // Add meta tags to head
+    metaTags.forEach((tag) => {
+      if (tag.content !== undefined && tag.content !== null) {
+        if (Object.prototype.hasOwnProperty.call(tag, 'name')) {
+          head.meta.push({
+            hid: tag.name,
+            name: tag.name,
+            content: tag.content,
+          })
+        } else if (Object.prototype.hasOwnProperty.call(tag, 'property')) {
+          head.meta.push({
+            hid: tag.property,
+            property: tag.property,
+            content: tag.content,
+          })
+        }
+      }
+    })
+
+    return head
   },
   methods: {
     clickTab(name) {

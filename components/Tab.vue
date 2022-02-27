@@ -3,7 +3,7 @@
     :class="{
       'border-blue-900 border-solid border-b-2 dark:border-blue-400': isActive,
     }"
-    class="px-4 py-2"
+    class="px-2 py-2 sm:px-4 sm:py-2"
   >
     <a class="cursor-pointer" href="#" target="_self" @click="clickTab()">
       <slot name="icon"></slot>

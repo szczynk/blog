@@ -27,7 +27,7 @@
         md:text-base
       "
     >
-      <div class="flex items-end mx-2">
+      <div class="hidden sm:flex mx-2">
         <a
           href="https://nuxtjs.org"
           target="_blank"
@@ -38,8 +38,8 @@
           <BuiltWithNuxtDark class="h-4 dark-img" />
         </a>
       </div>
-      <div class="flex items-end px-2">Szczynk Blog © {{ currentYear }}</div>
-      <div class="flex items-end">
+      <div class="flex px-2">Szczynk Blog © {{ currentYear }}</div>
+      <div class="flex">
         Made with ❤️ by &nbsp;
         <a
           href="https://github.com/sanguinary-bus"

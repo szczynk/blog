@@ -12,10 +12,13 @@ export default {
     },
   },
 
+  generate: {
+    fallback: '404.html',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Szczynk Blog',
-    titleTemplate: '%s - Szczynk Blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -76,16 +79,13 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      name: 'Szcznyk Blog',
+      short_name: 'Szcznyk Blog',
       background_color: '#ffffff',
-      theme_color: '#115173',
     },
     meta: {
       name: 'Szcznyk Blog',
-      description: 'My personal blog about anything that i need to talk.',
-      twitterCard: 'summary_large_image',
-      twitterSite: '@szczynk',
-      twitterCreator: '@szczynk',
+      theme_color: '#115173',
     },
   },
 
@@ -111,6 +111,8 @@ export default {
       // return all routes
       return routes
     },
+    cache: true,
+    gzip: true,
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -130,8 +132,6 @@ export default {
   // @nuxtjs/moment module options
   moment: {
     defaultTimezone: 'Asia/Jakarta',
-    defaultLocale: 'id',
-    locales: ['id'],
   },
 
   // nuxt optimized images module configuration

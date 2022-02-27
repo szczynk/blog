@@ -15,9 +15,20 @@
           <!-- article image -->
           <div v-if="blog.cover" v-lazy-container="{ selector: 'img' }">
             <img
-              class="rounded-l-lg shadow-md h-full w-full md:w-full lg:h-60"
-              :data-src="blog.cover.thumb"
-              :data-loading="blog.cover.thumb + '?lqip'"
+              class="
+                rounded-l-lg
+                shadow-md
+                h-full
+                w-[360px]
+                md:w-[360px]
+                lg:h-60
+              "
+              :data-src="
+                require(`@/assets/img/${blog.cover.thumb}?resize&sizes[]=360`)
+              "
+              :data-loading="
+                require(`@/assets/img/${blog.cover.thumb}?resize&sizes[]=360&lqip`)
+              "
               :alt="blog.cover.alt ? blog.cover.alt : blog.title"
             />
           </div>

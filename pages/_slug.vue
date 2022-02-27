@@ -44,8 +44,8 @@
       class="my-4 w-full"
     >
       <img
-        :data-src="blog.cover.thumb"
-        :data-loading="blog.cover.thumb + '?lqip'"
+        :data-src="require(`@/assets/img/${blog.cover.thumb}`)"
+        :data-loading="require(`@/assets/img/${blog.cover.thumb}?lqip`)"
         :alt="blog.cover.alt ? blog.cover.alt : blog.title"
       />
       <!-- eslint-disable -->
@@ -93,21 +93,40 @@ export default {
     }
   },
   head() {
+    const baseUrl = 'https://szczynk.github.io'
     const url = `https://szczynk.github.io/blog/${this.blog.slug}`
 
     const dateCreated = new Date(this.blog.createdAt)
     const dateChanged = new Date(this.blog.updatedAt)
 
+    const coverImage = require(`@/assets/img/${this.blog.cover.thumb}`)
+
+    let description = this.blog.title
+    if (this.blog.description) {
+      description = this.blog.description
+    }
+
     const structuredData = {
-      '@type': 'Article',
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
+      },
+      headline: this.blog.title,
+      description,
+      image: baseUrl + coverImage,
+      author: {
+        '@type': 'Person',
+        name: 'szczynk',
+        url: 'https://szczynk.github.io/resume/',
+      },
       datePublished: dateCreated.toISOString(),
       dateModified: dateChanged.toISOString(),
-      headline: this.blog.title,
-      image: this.blog.cover ? this.blog.cover : '',
     }
 
     const head = {
-      title: this.blog.title,
+      title: `${this.blog.title} | Szczynk Blog`,
       link: [
         {
           rel: 'canonical',
@@ -120,49 +139,61 @@ export default {
           json: structuredData,
         },
       ],
-      meta: [
-        {
-          hid: 'og:url',
-          name: 'og:url',
-          property: 'og:url',
-          content: url,
-        },
-        {
-          hid: 'og:title',
-          name: 'og:title',
-          property: 'og:title',
-          content: `${this.blog.title} - szczynk.github.io/blog`,
-        },
-      ],
+      meta: [],
     }
 
-    let description = this.blog.title
-    if (this.blog.description) {
-      description = this.blog.description
-    }
-
-    head.meta.push(
+    const metaTags = [
+      // Global
+      { name: 'author', content: 'szczynk' },
       {
-        hid: 'description',
-        name: 'description',
-        content: description,
+        name: 'apple-mobile-web-app-title',
+        content: `${this.blog.title} | Szczynk Blog`,
       },
-      {
-        hid: 'og:description',
-        name: 'og:description',
-        property: 'og:description',
-        content: description,
-      }
-    )
+      { name: 'description', content: description },
 
-    if (this.blog.cover) {
-      head.meta.push({
-        hid: 'og:image',
-        name: 'og:image',
-        property: 'og:image',
-        content: this.blog.cover.image,
-      })
-    }
+      // Facebook & LinkedIn
+      { property: 'og:title', content: `${this.blog.title} | Szczynk Blog` },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: url },
+      { property: 'og:image', content: baseUrl + coverImage },
+      { property: 'og:image:width', content: 1200 },
+      { property: 'og:image:height', content: 638 },
+      { property: 'og:locale', content: 'en' },
+      {
+        property: 'og:site_name',
+        content: `${this.blog.title} | Szczynk Blog`,
+      },
+
+      // Twitter
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@szczynk' },
+      { name: 'twitter:creator', content: '@szczynk' },
+      { name: 'twitter:title', content: `${this.blog.title} | Szczynk Blog` },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: baseUrl + coverImage },
+      { name: 'twitter:image:width', content: 1200 },
+      { name: 'twitter:image:height', content: 638 },
+    ]
+
+    // Add meta tags to head
+    metaTags.forEach((tag) => {
+      if (tag.content !== undefined && tag.content !== null) {
+        if (Object.prototype.hasOwnProperty.call(tag, 'name')) {
+          head.meta.push({
+            hid: tag.name,
+            name: tag.name,
+            content: tag.content,
+          })
+        } else if (Object.prototype.hasOwnProperty.call(tag, 'property')) {
+          head.meta.push({
+            hid: tag.property,
+            property: tag.property,
+            content: tag.content,
+          })
+        }
+      }
+    })
 
     return head
   },
