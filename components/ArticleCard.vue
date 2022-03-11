@@ -76,10 +76,7 @@
                 </span>
               </div>
               <!-- list of tags -->
-              <div
-                v-if="blog.tags.length"
-                class="flex flex-wrap justify-center"
-              >
+              <div class="flex flex-wrap justify-center">
                 <span
                   v-for="tag in blog.tags"
                   :key="tag"

@@ -17,7 +17,7 @@
         {{ $moment(blog.createdAt).format('LLL') }}
       </span>
     </div>
-    <div v-if="blog.tags.length" class="flex flex-wrap mb-3">
+    <div class="flex flex-wrap mb-3">
       <span
         v-for="tag in blog.tags"
         :key="tag"

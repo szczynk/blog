@@ -1,7 +1,7 @@
 ---
-title: 'Introduction'
+title: "Introduction"
 subtitle: "Hi, my name is Szczynk. I'm just a regular guy that like coding."
-lead: 'Where I finally decided to blog.'
+lead: "Where I finally decided to blog."
 description: "Hi, I'm Szczynk, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on bachelor thesis about the effect of external electric field on electrical and magnetic properties of NiBr2 monolayer based density functional theory (DFT)."
 cover:
   image: 'introduction.png'
@@ -13,7 +13,7 @@ tags:
   - About Me
 ---
 
-Hi, I'm **Szczynk** also called as **Bagus**, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on bachelor thesis about the effect of external electric field on electrical and magnetic properties of NiBr<sub>2</sub> monolayer based density functional theory (DFT). Wish me pass and publish this year.
+Hi, I'm **Szczynk** also called as **Bagus**, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on undergraduate thesis about the effect of external electric field on electrical and magnetic properties of NiBr<sub>2</sub> monolayer based density functional theory (DFT). Wish me pass and publish this year.
 
 I started a blog because I don't like to write but i need to write as a self-reflection note about what I have achieved, currently, and will achieve or experience and also share a little bit of my thoughts, stories, ideas, and rants.
 

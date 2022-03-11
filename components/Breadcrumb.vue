@@ -20,7 +20,11 @@
             <!-- Bread Title End -->
             <ol class="flex p-0 m-0 rounded list-reset justify-center">
               <li>
-                <a href="/" target="_self" class="nuxt-link-active font-bold">
+                <a
+                  href="/blog/"
+                  target="_self"
+                  class="nuxt-link-active font-bold"
+                >
                   Home
                 </a>
               </li>

@@ -137,7 +137,6 @@ export default {
   // nuxt optimized images module configuration
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: true,
     mozjpeg: {
       quality: 80,
     },
