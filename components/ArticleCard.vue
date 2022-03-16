@@ -35,7 +35,7 @@
           <div class="max-w-xs md:max-w-md">
             <div class="flex-auto p-4">
               <NuxtLink
-                :to="blog.path"
+                :to="{ name: 'slug', params: { slug: blog.slug } }"
                 class="
                   block
                   mb-3
@@ -52,7 +52,7 @@
               </NuxtLink>
               <NuxtLink
                 v-if="blog.subtitle"
-                :to="blog.path"
+                :to="{ name: 'slug', params: { slug: blog.slug } }"
                 tag="p"
                 class="
                   text-gray-700
