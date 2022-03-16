@@ -1,3 +1,11 @@
+img[lazy='loading'] {
+  filter: blur(15px);
+}
+
+figure img[lazy='loading'] {
+  filter: blur(15px);
+}
+
 .dark-mode .light-img {
   display: none;
 }
@@ -45,6 +53,10 @@
   width: 100%;
 }
 
+.nuxt-content img[lazy='loading'] {
+  filter: blur(15px);
+}
+
 .nuxt-content a {
   text-decoration: underline;
 }
@@ -78,6 +90,7 @@
   border-left: 4px solid rgb(75, 85, 99);
   font-style: italic;
   padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .nuxt-content p code,

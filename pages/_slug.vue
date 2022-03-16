@@ -18,9 +18,10 @@
       </span>
     </div>
     <div class="flex flex-wrap mb-3">
-      <span
+      <NuxtLink
         v-for="tag in blog.tags"
         :key="tag"
+        :to="`/tag/${tag}`"
         class="
           inline-flex
           items-center
@@ -33,10 +34,11 @@
           mr-2
           mb-2
           dark:bg-gray-700
+          capitalize
         "
       >
         {{ tag }}
-      </span>
+      </NuxtLink>
     </div>
     <figure
       v-if="blog.cover"

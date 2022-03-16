@@ -9,8 +9,8 @@ cover:
   alt: 'Introduction cover image'
   caption: 'Photo by <a href="https://google.com">Google Image</a>'
 tags:
-  - Personal
-  - About Me
+  - personal
+  - about me
 ---
 
 Hi, I'm **Szczynk** also called as **Bagus**, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on undergraduate thesis about the effect of external electric field on electrical and magnetic properties of NiBr<sub>2</sub> monolayer based density functional theory (DFT). Wish me pass and publish this year.

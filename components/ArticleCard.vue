@@ -35,7 +35,7 @@
           <div class="max-w-xs md:max-w-md">
             <div class="flex-auto p-4">
               <NuxtLink
-                :to="blog.slug"
+                :to="blog.path"
                 class="
                   block
                   mb-3
@@ -52,7 +52,7 @@
               </NuxtLink>
               <NuxtLink
                 v-if="blog.subtitle"
-                :to="blog.slug"
+                :to="blog.path"
                 tag="p"
                 class="
                   text-gray-700
@@ -77,9 +77,10 @@
               </div>
               <!-- list of tags -->
               <div class="flex flex-wrap justify-center">
-                <span
+                <NuxtLink
                   v-for="tag in blog.tags"
                   :key="tag"
+                  :to="`/tag/${tag}`"
                   class="
                     inline-flex
                     items-center
@@ -92,10 +93,11 @@
                     mr-2
                     mb-2
                     dark:bg-gray-700
+                    capitalize
                   "
                 >
                   {{ tag }}
-                </span>
+                </NuxtLink>
               </div>
             </div>
           </div>
@@ -115,9 +117,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-img[lazy='loading'] {
-  filter: blur(15px);
-}
-</style>

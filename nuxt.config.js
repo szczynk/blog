@@ -28,7 +28,6 @@ export default {
         content: 'My personal blog about anything that i need to talk.',
       },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'google', content: 'nositelinkssearchbox' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

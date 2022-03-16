@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-40 pb-40">
+  <div>
     <div class="container">
       <div class="row">
         <div class="col-12" data-aos="fade-up" data-aos-delay="300">
@@ -30,7 +30,7 @@
               </li>
               <li><span class="text-gray-500 mx-2">/</span></li>
               <li>
-                <span>Blog</span>
+                <span>{{ subtitle }}</span>
               </li>
             </ol>
           </div>
@@ -43,7 +43,8 @@
 <script>
 export default {
   props: {
-    title: { type: String, default: '' },
+    title: { type: String, default: 'Blog' },
+    subtitle: { type: String, default: 'Blog' },
   },
 }
 </script>

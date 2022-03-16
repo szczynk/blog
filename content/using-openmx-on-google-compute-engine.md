@@ -9,10 +9,10 @@ cover:
   alt: 'Using OpenMX on Google Compute Engine cover image'
   caption: 'Edited Photo by Me'
 tags:
-  - Tech
-  - OpenMX
-  - Google Cloud Platform
-  - Compute Engine
+  - tech
+  - openMX
+  - google cloud platform
+  - compute Engine
 ---
 
 ## Introduction
@@ -50,9 +50,6 @@ Forgive me, I forgot the first time I logged in Google console, I just followed 
 
     c. Select **c2-standard-8** or **c2d-standard-8** machine type (8 vCPU equals 4 cores)
 
-    >**Note** <br>
-    >the maximum default for all types of Compute Engine vCPU [quotas](https://console.cloud.google.com/iam-admin/quotas?project=&pageState=(%22allQuotasTable%22:(%22f%22:%22%255B%257B_22k_22_3A_22Service_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22Compute%2520Engine%2520API_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22serviceTitle_22%257D_2C%257B_22k_22_3A_22Limit_22_2C_22t_22_3A2_2C_22v_22_3A_22%257B_5C_22v_5C_22_3A_5C_228_5C_22_2C_5C_22o_5C_22_3A_5C_22%253D_5C_22%257D_22_2C_22i_22_3A_22effectiveLimit_22%257D_2C%257B_22k_22_3A_22Dimensions%2520%2528e.g.%2520location%2529_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22region_3Aus-central1_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22displayDimensions_22%257D%255D%22))) for each region is 8
-
 9. Enable **display device**
 10. In the Boot disk section, click **Change**, and then do the following :
 
@@ -73,6 +70,22 @@ Forgive me, I forgot the first time I logged in Google console, I just followed 
 It takes a few moments to create your instance.
 
 Congratulations you have created and started a VM instance.
+
+><NoteBlockquote></NoteBlockquote>
+>
+> - the maximum default for all types of Compute Engine vCPUs [quotas](https://console.cloud.google.com/iam-admin/quotas?project=&pageState=(%22allQuotasTable%22:(%22f%22:%22%255B%257B_22k_22_3A_22Service_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22Compute%2520Engine%2520API_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22serviceTitle_22%257D_2C%257B_22k_22_3A_22Limit_22_2C_22t_22_3A2_2C_22v_22_3A_22%257B_5C_22v_5C_22_3A_5C_228_5C_22_2C_5C_22o_5C_22_3A_5C_22%253D_5C_22%257D_22_2C_22i_22_3A_22effectiveLimit_22%257D_2C%257B_22k_22_3A_22Dimensions%2520%2528e.g.%2520location%2529_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22region_3Aus-central1_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22displayDimensions_22%257D%255D%22))) for each region is **8 vCPUs** running at the same time.
+> - **You can't request a quota increase**. For an overview of Compute Engine quotas, see [Resource quotas](https://cloud.google.com/compute/quotas).
+>You must **upgrade your account** to perform any of the actions in the preceding list.
+>
+>The [free trial ends](https://cloud.google.com/free/docs/gcp-free-tier#end) when you use **all of your credit, or after 3 months**, whichever happens first. At that time, the following conditions apply:
+>
+> - You must [upgrade to a paid account](https://cloud.google.com/free/docs/gcp-free-tier#how-to-upgrade) to continue using Google Cloud. (**recommended upgrade before free trial ends**)
+> - All resources you created during the trial are stopped.
+> - **Any data you stored in Compute Engine is lost**.
+> - Your account enters a 30-day grace period, during which you can **recover or export manually** any resources and data you stored in any Google Cloud services during the trial period.
+> - You might receive a message stating that your account has been canceled, which only indicates that your account has been suspended to prevent charges.
+>
+>Lots of notes huh? I'm sorry, I'm afraid your calculations and data are lost
 
 ## Setting up desktop environment on Compute Engine
 
@@ -160,11 +173,9 @@ To start the remote desktop server, you need to have an authorization key for th
 
     You use this command to set up and start the Chrome Remote Desktop service on your VM instance, linking it with your Google Account using the authorization code.
 
-    >**Note** <br>
-    >The authorization code in the command line is valid for only a few minutes, and you can use it only once. Otherwise restart this step again.
-    &nbsp;
-    >**Note** <br>
-    >You can know your hostname by looking at your SSH like this `username@hostname`, if you name your VM instance **openmx** your hostname is `openmx`
+    ><NoteBlockquote></NoteBlockquote>
+    >The authorization code in the command line is valid for only a few minutes, and you can use it only once. Otherwise restart this step again. <br>
+    >You can know your hostname by looking at your SSH like this `username@hostname`, if you name your VM instance **openmx** your hostname is `openmx` <br>
 
 6. Copy the command to the SSH window that's connected to your instance, and then run the command.
 7. When you're prompted, enter a 6-digit PIN. This number will be used for additional authorization when you connect later.
@@ -249,8 +260,8 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
     now you close your SSH window
 
-    >**Note** <br>
-    >You need SSH window to get sudo command
+    ><NoteBlockquote></NoteBlockquote>
+    >You need SSH window to get **sudo** command
 
 4. Connect your VM instance using the Chrome Remote Desktop web application by clicking the name of the remote desktop instance for example **openmx**.
 
@@ -321,8 +332,10 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
     make kSpin
     ```
 
-> **Tips** <br>
->Read through the [OpenMX manual](http://www.openmx-square.org/openmx_man3.9/) for various details. <br>
->[OpenMX viewer](http://www.openmx-square.org/viewer/index.html) can help you choose certain parameters for the input file e.g., basis configuration. You may also consult this [reference table](http://www.openmx-square.org/openmx_man3.9/node27.html). <br>
->[SeeK-path](https://www.materialscloud.org/work/tools/seekpath) tool can help you build the k-path. <br>
->The work directory under OpenMX installation contains lots of example files for your reference.
+><TipsBlockquote></TipsBlockquote>
+>
+> - Read through the [OpenMX manual](http://www.openmx-square.org/openmx_man3.9/) for various details.
+> - [OpenMX viewer](http://www.openmx-square.org/viewer/index.html) can help you choose certain parameters for the input file e.g., basis configuration. You may also consult this [reference table](http://www.openmx-square.org/openmx_man3.9/node27.html).
+> - [SeeK-path](https://www.materialscloud.org/work/tools/seekpath) tool can help you build the k-path.
+> - [VESTA](https://jp-minerals.org/vesta/en/) and [xcrysden](http://www.xcrysden.org/) tool can be used for the visualization.
+> - The work directory under OpenMX installation contains lots of example files for your reference.

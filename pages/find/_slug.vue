@@ -1,49 +1,13 @@
 <template>
   <div>
-    <Breadcrumb class="pt-40 pb-40" />
+    <Breadcrumb subtitle="Find" class="pt-16 pb-16" />
     <div class="block text-sm md:text-base">
       <TabsWrapper>
-        <Tab
-          title="tech"
-          :is-active="activeTab === 'tech'"
-          :on-click-tab="clickTab"
-        />
-        <Tab
-          title="game"
-          :is-active="activeTab === 'game'"
-          :on-click-tab="clickTab"
-        />
-        <Tab
-          title="all"
-          :is-active="activeTab === 'all'"
-          :on-click-tab="clickTab"
-        />
-        <Tab
-          title="personal"
-          :is-active="activeTab === 'personal'"
-          :on-click-tab="clickTab"
-        />
-        <Tab
-          title="misc"
-          :is-active="activeTab === 'misc'"
-          :on-click-tab="clickTab"
-        />
+        <Tab :title="activeTab" />
       </TabsWrapper>
       <TabsContent>
-        <div v-if="activeTab === 'tech'">
-          <ArticleCardWrapper :blogs="techBlogs" />
-        </div>
-        <div v-if="activeTab === 'game'">
-          <ArticleCardWrapper :blogs="gameBlogs" />
-        </div>
-        <div v-if="activeTab === 'all'">
-          <ArticleCardWrapper :blogs="allBlogs" />
-        </div>
-        <div v-if="activeTab === 'personal'">
-          <ArticleCardWrapper :blogs="personalBlogs" />
-        </div>
-        <div v-if="activeTab === 'misc'">
-          <ArticleCardWrapper :blogs="miscBlogs" />
+        <div>
+          <ArticleCardWrapper :blogs="finds" />
         </div>
       </TabsContent>
     </div>
@@ -52,53 +16,19 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
-    const allBlogs = await $content()
+  async asyncData({ $content, params }) {
+    const finds = await $content()
       .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
-      .sortBy('createdAt', 'desc')
-      .limit(20)
-      .fetch()
-
-    const techBlogs = await $content()
-      .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
-      .where({ tags: { $contains: 'tech' } })
-      .sortBy('createdAt', 'desc')
-      .fetch()
-
-    const gameBlogs = await $content()
-      .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
-      .where({ tags: { $contains: 'game' } })
-      .sortBy('createdAt', 'desc')
-      .fetch()
-
-    const personalBlogs = await $content()
-      .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
-      .where({ tags: { $contains: 'personal' } })
-      .sortBy('createdAt', 'desc')
-      .fetch()
-
-    const miscBlogs = await $content()
-      .only(['title', 'subtitle', 'slug', 'cover', 'createdAt', 'tags'])
-      .where({ tags: { $contains: 'misc' } })
-      .sortBy('createdAt', 'desc')
+      .search(params.slug)
       .fetch()
 
     return {
-      allBlogs,
-      techBlogs,
-      gameBlogs,
-      personalBlogs,
-      miscBlogs,
-    }
-  },
-  data() {
-    return {
-      activeTab: 'all',
+      finds,
     }
   },
   head() {
     const baseUrl = 'https://szczynk.github.io'
-    const url = 'https://szczynk.github.io/blog/'
+    const url = 'https://szczynk.github.io/blog/find/'
 
     const coverImage = require('@/assets/img/introduction.png')
 
@@ -197,9 +127,9 @@ export default {
 
     return head
   },
-  methods: {
-    clickTab(name) {
-      this.activeTab = name
+  computed: {
+    activeTab() {
+      return this.$route.params.slug || ''
     },
   },
 }
