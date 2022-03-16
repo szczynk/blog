@@ -1,1 +1,0 @@
-__NUXT_JSONP__("manifest.js", {routes:["\u002F","\u002Fusing-openmx-on-google-compute-engine","\u002Fintroduction"]})
