@@ -44,7 +44,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
     "lqip-loader": "^2.2.1",
-    "postcss": "^8.4.11",
+    "postcss": "^8.4.12",
     "prettier": "^2.3.2",
     "push-dir": "^0.4.1",
     "responsive-loader": "^2.3.0",
