@@ -1,5 +1,5 @@
 <template>
-  <div v-lazy-container="{ selector: 'img' }" class="inline-block">
+  <div v-lazy-container="{ selector: 'img' }">
     <img
       :data-src="require(`@/assets/img/${filename}`)"
       :data-loading="require(`@/assets/img/${filename}?lqip`)"

@@ -36,7 +36,7 @@ Then go to [GCP free trial page](https://console.cloud.google.com/freetrial/) an
 Forgive me, I forgot the first time I logged in Google console, I just followed the popup prompts and suddenly my project name is **My First Project**. Let's move on.
 
 1. Let's go to the home page or dashboard or this [link](https://console.cloud.google.com/home/dashboard)
-2. Click the **navigation menu** button at the very top left <DynamicImg filename="2022-03-10-19-31-console.cloud.google.com-nav-button.png" />
+2. Click the **navigation menu** button at the very top left <DynamicImg filename="2022-03-10-19-31-console.cloud.google.com-nav-button.png" class="inline-block"/>
 3. Look for the **Compute Engine** button and hover over the VM instances button
 4. Click the **VM instances** button or this [link](https://console.cloud.google.com/compute/instances)
 5. Click the **Create Instance** button or this [link](https://console.cloud.google.com/compute/instancesAdd)
@@ -97,7 +97,7 @@ For remote connections over slower networks I recommended Xfce because it has mi
 
 1. After the instance has been created, connect to your **openmx** instance by clicking the SSH button in the instance list :
 
-    &nbsp;<DynamicImg filename="2022-03-11-01-58-console.cloud.google.com-ssh-button.png" />
+    &nbsp;<DynamicImg filename="2022-03-11-01-58-console.cloud.google.com-ssh-button.png" class="inline-block"/>
 
 2. In the SSH window connected to your VM instance, update the package manager data and install wget :
 
@@ -269,7 +269,7 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
 1. Click the **File Manager** :
 
-    &nbsp;<DynamicImg filename="2022-03-11-14-08-chrome.remote.dekstop-file-manager.png" />
+    &nbsp;<DynamicImg filename="2022-03-11-14-08-chrome.remote.dekstop-file-manager.png" class="inline-block"/>
 
 2. **Right click** and then click **Extract Here** on **openmx3.9.tar.gz**
 3. **Right click** and then click **Cut** on **patch3.9.9.tar.gz**
