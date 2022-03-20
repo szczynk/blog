@@ -1,4 +1,13 @@
 export default {
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL,
+    resumeURL: `${process.env.BASE_URL}/resume/`,
+    blogURL: `${process.env.BASE_URL}/blog/`,
+    twitter: process.env.TWITTER,
+    github: process.env.GITHUB,
+    title: process.env.TITLE,
+    description: process.env.DESCRIPTION,
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
@@ -18,14 +27,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Szczynk Blog',
+    title: process.env.TITLE,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'My personal blog about anything that i need to talk.',
+        content: process.env.DESCRIPTION,
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
@@ -90,7 +99,7 @@ export default {
 
   // Sitemap module configuration: https://sitemap.nuxtjs.org/guide/configuration
   sitemap: {
-    hostname: 'https://szczynk.github.io',
+    hostname: process.env.BASE_URL,
     routes: async () => {
       const { $content } = require('@nuxt/content')
 
@@ -155,7 +164,6 @@ export default {
       // You can disable middleware if you serve static files using nginx...
       enabled: false,
     },
-
     // build time compression settings
     gzip: {
       // should compress to gzip?

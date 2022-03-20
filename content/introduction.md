@@ -8,6 +8,8 @@ cover:
   thumb: 'introduction.png'
   alt: 'Introduction cover image'
   caption: 'Photo by <a href="https://google.com">Google Image</a>'
+createdAt: 2022-02-26T08:46:20Z
+updatedAt: 2022-02-27T12:14:07Z
 tags:
   - personal
   - about me

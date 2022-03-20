@@ -10,7 +10,7 @@
       text-gray-700
       dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300
     "
-    :class="{ 'shadow-lg border-transparent': scrolled }"
+    :class="{ 'shadow-lg border-transparent dark:shadow-gray-700': scrolled }"
     @click="scrollToTop"
   >
     <div class="container mx-auto flex-1 px-4 lg:px-8">
@@ -19,7 +19,7 @@
           <NuxtLink
             :to="'/'"
             class="flex-shrink-0 flex-1 font-bold text-xl"
-            :aria-label="`${settings.title} Logo`"
+            :aria-label="`${$config.title} Logo`"
           >
             <span
               v-if="!logo"
@@ -30,20 +30,20 @@
                 dark:[text-shadow:0.25rem_0.25rem_0.25rem_rgba(255,255,255,0.25)]
               "
             >
-              {{ settings.title }}
+              {{ $config.title }}
             </span>
 
             <img
               v-if="logo"
               :src="logo.light"
               class="h-8 max-w-full light-img"
-              :alt="settings.title"
+              :alt="$config.title"
             />
             <img
               v-if="logo"
               :src="logo.dark"
               class="h-8 max-w-full dark-img"
-              :alt="settings.title"
+              :alt="$config.title"
             />
           </NuxtLink>
         </div>
@@ -82,8 +82,8 @@
               </button>
             </span>
             <a
-              v-if="settings.twitter"
-              :href="`https://twitter.com/${settings.twitter}`"
+              v-if="$config.twitter"
+              :href="`https://twitter.com/${$config.twitter}`"
               target="_blank"
               rel="noopener noreferrer"
               title="Twitter"
@@ -100,8 +100,8 @@
               <IconTwitter class="w-5 h-5" />
             </a>
             <a
-              v-if="settings.github"
-              :href="githubUrls.repo"
+              v-if="$config.github"
+              :href="`https://github.com/${$config.github}`"
               target="_blank"
               rel="noopener noreferrer"
               title="Github"
@@ -130,18 +130,10 @@ export default {
     return {
       scrolled: 0,
       settings: {
-        title: 'Szczynk Blog',
-        twitter: 'szczynk',
-        github: 'szczynk/blog',
         // logo: {
         //   light: '',
         //   dark: '',
         // },
-      },
-      githubUrls: {
-        repo: 'https://github.com/szczynk/blog',
-        issues: 'https://github.com/szczynk/blog/issues',
-        pull: 'https://github.com/szczynk/blog/pulls',
       },
     }
   },

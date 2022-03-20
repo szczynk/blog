@@ -8,6 +8,8 @@ cover:
   thumb: 'using-openmx-on-google-compute-engine.png'
   alt: 'Using OpenMX on Google Compute Engine cover image'
   caption: 'Edited Photo by Me'
+createdAt: 2022-03-11T09:42:00Z
+updatedAt: 2022-03-16T07:43:40Z
 tags:
   - tech
   - openMX

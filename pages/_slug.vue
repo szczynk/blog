@@ -8,13 +8,16 @@
     </h2>
     <div class="text-sm mb-3">
       <a
-        href="https://szczynk.github.io/resume/"
+        :href="$config.resumeURL"
         class="text-black font-bold mr-2 dark:text-white"
       >
-        szczynk
+        {{ $config.twitter }}
       </a>
-      <span v-if="blog.createdAt" class="text-gray-600 dark:text-gray-400">
-        {{ $moment(blog.createdAt).format('LLL') }}
+      <span v-if="blog.createdAt" class="mr-2 text-gray-600 dark:text-gray-400">
+        Created at {{ $moment(blog.createdAt).format('LLL') }}
+      </span>
+      <span v-if="blog.updatedAt" class="mr-2 text-gray-600 dark:text-gray-400">
+        Updated {{ $moment(blog.updatedAt).fromNow() }}
       </span>
     </div>
     <div class="flex flex-wrap mb-3">
@@ -95,8 +98,8 @@ export default {
     }
   },
   head() {
-    const baseUrl = 'https://szczynk.github.io'
-    const url = `https://szczynk.github.io/blog/${this.blog.slug}`
+    const baseUrl = this.$config.baseURL
+    const url = `${this.$config.blogURL}${this.blog.slug}`
 
     const dateCreated = new Date(this.blog.createdAt)
     const dateChanged = new Date(this.blog.updatedAt)
@@ -120,15 +123,15 @@ export default {
       image: baseUrl + coverImage,
       author: {
         '@type': 'Person',
-        name: 'szczynk',
-        url: 'https://szczynk.github.io/resume/',
+        name: this.$config.twitter,
+        url: this.$config.resumeURL,
       },
       datePublished: dateCreated.toISOString(),
       dateModified: dateChanged.toISOString(),
     }
 
     const head = {
-      title: `${this.blog.title} | Szczynk Blog`,
+      title: `${this.blog.title} | ${this.$config.title}`,
       link: [
         {
           rel: 'canonical',
@@ -146,15 +149,18 @@ export default {
 
     const metaTags = [
       // Global
-      { name: 'author', content: 'szczynk' },
+      { name: 'author', content: this.$config.twitter },
       {
         name: 'apple-mobile-web-app-title',
-        content: `${this.blog.title} | Szczynk Blog`,
+        content: `${this.blog.title} | ${this.$config.title}`,
       },
       { name: 'description', content: description },
 
       // Facebook & LinkedIn
-      { property: 'og:title', content: `${this.blog.title} | Szczynk Blog` },
+      {
+        property: 'og:title',
+        content: `${this.blog.title} | ${this.$config.title}`,
+      },
       { property: 'og:description', content: description },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: url },
@@ -164,14 +170,17 @@ export default {
       { property: 'og:locale', content: 'en' },
       {
         property: 'og:site_name',
-        content: `${this.blog.title} | Szczynk Blog`,
+        content: `${this.blog.title} | ${this.$config.title}`,
       },
 
       // Twitter
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@szczynk' },
-      { name: 'twitter:creator', content: '@szczynk' },
-      { name: 'twitter:title', content: `${this.blog.title} | Szczynk Blog` },
+      { name: 'twitter:site', content: `@${this.$config.twitter}` },
+      { name: 'twitter:creator', content: `@${this.$config.twitter}` },
+      {
+        name: 'twitter:title',
+        content: `${this.blog.title} | ${this.$config.title}`,
+      },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: baseUrl + coverImage },
       { name: 'twitter:image:width', content: 1200 },

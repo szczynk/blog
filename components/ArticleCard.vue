@@ -66,10 +66,10 @@
               </NuxtLink>
               <div class="text-sm mb-3">
                 <a
-                  href="https://szczynk.github.io/resume/"
+                  :href="$config.resumeURL"
                   class="text-black font-bold mr-2 dark:text-white"
                 >
-                  szczynk
+                  {{ $config.twitter }}
                 </a>
                 <span class="text-gray-600 dark:text-gray-400">
                   {{ $moment(blog.createdAt).format('LLL') }}

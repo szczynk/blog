@@ -8,6 +8,8 @@ cover:
   thumb: 'collecting-watches-as-a-hobby.png'
   alt: 'Collecting Watches As a Hobby cover image'
   caption: 'Free photo by <a href="https://pixnio.com/objects/clocks/collection-fashion-hand-luxury-man-watches#">pixnio</a>'
+createdAt: 2022-03-19T13:35:41Z
+updatedAt: 2022-03-19T13:35:41Z
 tags:
   - personal
   - hobby

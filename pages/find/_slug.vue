@@ -27,31 +27,30 @@ export default {
     }
   },
   head() {
-    const baseUrl = 'https://szczynk.github.io'
-    const url = 'https://szczynk.github.io/blog/find/'
+    const baseUrl = this.$config.baseURL
+    const url = `${this.$config.blogURL}find/`
 
     const coverImage = require('@/assets/img/introduction.png')
 
-    const description = 'My personal blog about anything that i need to talk.'
+    const description = this.$config.description
 
     const structuredData = {
       '@context': 'https://schema.org/',
       '@type': 'WebSite',
-      name: 'Szczynk Blog',
-      url: 'https://szczynk.github.io/blog/',
+      name: this.$config.title,
+      url: this.$config.blogURL,
       description,
       image: baseUrl + coverImage,
       author: {
         '@type': 'Person',
-        name: 'szczynk',
-        url: 'https://szczynk.github.io/resume/',
+        name: this.$config.twitter,
+        url: this.$config.resumeURL,
       },
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate:
-            'https://szczynk.github.io/blog/find/{search_term_string}',
+          urlTemplate: `${this.$config.blogURL}find/{search_term_string}`,
         },
         'query-input': 'required name=search_term_string',
       },
@@ -75,14 +74,14 @@ export default {
 
     const metaTags = [
       // Global
-      { name: 'author', content: 'szczynk' },
+      { name: 'author', content: this.$config.twitter },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'Szczynk Blog',
+        content: this.$config.title,
       },
 
       // Facebook & LinkedIn
-      { property: 'og:title', content: 'Szczynk Blog' },
+      { property: 'og:title', content: this.$config.title },
       { property: 'og:description', content: description },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: url },
@@ -92,14 +91,14 @@ export default {
       { property: 'og:locale', content: 'en' },
       {
         property: 'og:site_name',
-        content: 'Szczynk Blog',
+        content: this.$config.title,
       },
 
       // Twitter
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@szczynk' },
-      { name: 'twitter:creator', content: '@szczynk' },
-      { name: 'twitter:title', content: 'Szczynk Blog' },
+      { name: 'twitter:site', content: `@${this.$config.twitter}` },
+      { name: 'twitter:creator', content: `@${this.$config.twitter}` },
+      { name: 'twitter:title', content: this.$config.title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: baseUrl + coverImage },
       { name: 'twitter:image:width', content: 1200 },

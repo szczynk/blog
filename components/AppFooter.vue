@@ -38,7 +38,7 @@
           <BuiltWithNuxtDark class="h-4 dark-img" />
         </a>
       </div>
-      <div class="flex px-2">Szczynk Blog © {{ currentYear }}</div>
+      <div class="flex px-2">{{ $config.title }} © {{ currentYear }}</div>
       <div class="flex">
         Made with ❤️ by &nbsp;
         <a
