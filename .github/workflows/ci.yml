@@ -8,6 +8,13 @@ on:
   pull_request:
     branches: [master]
 
+env:
+  BASE_URL: https://szczynk.github.io
+  TWITTER: szczynk
+  GITHUB: szczynk/blog
+  TITLE: "Szczynk's Blog"
+  DESCRIPTION: 'My personal blog about anything that i need to talk.'
+
 jobs:
   ci:
     runs-on: ${{ matrix.os }}
