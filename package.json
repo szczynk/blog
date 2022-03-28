@@ -45,7 +45,7 @@
     "imagemin-svgo": "^9.0.0",
     "lqip-loader": "^2.2.1",
     "postcss": "^8.4.12",
-    "prettier": "^2.6.0",
+    "prettier": "^2.6.1",
     "push-dir": "^0.4.1",
     "responsive-loader": "^2.3.0",
     "sharp": "^0.30.3",
