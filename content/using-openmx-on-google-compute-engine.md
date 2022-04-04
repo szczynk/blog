@@ -9,7 +9,7 @@ cover:
   alt: 'Using OpenMX on Google Compute Engine cover image'
   caption: 'Edited Photo by Me'
 createdAt: 2022-03-11T09:42:00Z
-updatedAt: 2022-03-16T07:43:40Z
+updatedAt: 2022-04-04T21:26:40Z
 tags:
   - tech
   - openMX
@@ -89,6 +89,110 @@ Congratulations you have created and started a VM instance.
 >
 >Lots of notes huh? I'm sorry, I'm afraid your calculations and data are lost
 
+### Optional : Adding and formating a non-boot disk to your VM
+
+when the boot disk starts to full, you can add a non-boot disk to your VM
+
+1. Go to the [VM instances](https://console.cloud.google.com/compute/instances) page.
+2. Check the box and click the name of the instance where you want to add a disk.
+3. On the **VM instance details** page, click **Edit**.
+4. Under **Additional disks**, click **Add new disk**.
+5. Specify a name for the disk, configure the disk's properties, and select **Blank** as the **Source type**.
+6. Click **Done** to complete the disk's configuration.
+7. Click **Save** to apply your changes to the instance and add the new disk.
+8. Click the **SSH** button next to the instance that has the new attached disk. The browser opens a terminal connection to the VM.
+9. In the terminal, use the `lsblk` command to list the disks that are attached to your instance and find the disk that you want to format and mount.
+
+    ```shell
+    sudo lsblk
+
+    sda       8:0    0    10G  0 disk 
+    ├─sda1    8:1    0   9.9G  0 part /
+    ├─sda14   8:14   0     4M  0 part 
+    └─sda15   8:15   0   106M  0 part /boot/efi
+    sdb       8:16   0    10G  0 disk 
+    ```
+
+    In this example, sdb is the device name for the new blank persistent disk.
+
+10. Format the disk using the [`mkfs` tool](http://manpages.ubuntu.com/manpages/xenial/man8/mkfs.8.html). This command **deletes** all data from the specified disk, so make sure that you specify the disk device correctly.
+
+    ```shell
+    sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/sdb
+    ```
+
+11. Create a directory that serves as the mount point for the new disk on the VM. You can use any directory. The following example creates a directory under `/mnt/disks/`.
+
+    ```shell
+    sudo mkdir -p /mnt/disks/openmx
+    ```
+
+12. Use the [`mount` tool](http://manpages.ubuntu.com/manpages/xenial/man8/mount.8.html) to mount the disk to the instance, and enable the `discard` option:
+
+    ```shell
+    sudo mount -o discard,defaults /dev/sdb /mnt/disks/openmx
+    ```
+
+    ><NoteBlockquote></NoteBlockquote>
+    >You can mount /dev/sdb to any directory you want.
+
+13. Configure read and write permissions on the disk. For this example, grant write access to the disk for all users.
+
+    ```shell
+    sudo chmod a+w /mnt/disks/openmx
+    ```
+
+14. Configuring automatic mounting on VM restart by Add the disk to your `/etc/fstab` file, so that the disk automatically mounts again when the VM restarts. On Linux operating systems, the device name can change with each reboot, but the device UUID always points to the same volume, even when you move disks between systems.
+
+    Create a backup of your current `/etc/fstab` file.
+
+    ```shell
+    sudo cp /etc/fstab /etc/fstab.backup
+    ```
+
+15. Use the `blkid` command to list the UUID for the disk.
+
+    ```shell
+    sudo blkid /dev/sdb
+    ```
+
+    for example output of `blkid` command
+
+    ```shell
+    /dev/sdb: UUID="c76cb476-9438-42e4-a31a-2bf428a42043" TYPE="ext4"
+    ```
+
+16. Open the `/etc/fstab` file in a text editor and create an entry that includes the UUID.
+
+    ```shell
+    sudo nano /etc/fstab
+    ```
+
+    add this line after last line.
+
+    ```shell
+    UUID=UUID_VALUE /mnt/disks/openmx ext4 discard,defaults,nofail 0 2
+    ```
+
+    Replace the following:
+        - UUID_VALUE: the UUID of the disk, listed in the output of the previous step
+
+17. Use the `cat` command to verify that your `/etc/fstab` entries are correct:
+
+    ```shell
+    cat /etc/fstab
+    ```
+
+    for example output of `cat` command
+
+    ```shell
+    LABEL=cloudimg-rootfs /  ext4 defaults 0 1
+    LABEL=UEFI /boot/efi vfat umask=0077 0 1
+    UUID="c76cb476-9438-42e4-a31a-2bf428a42043" /mnt/disks/openmx ext4 discard,defaults,nofail 0 2
+    ```
+
+    If you detach this disk or create a snapshot from the boot disk for this VM, edit the /etc/fstab file and remove the entry for this disk. Even with MOUNT_OPTION set to nofail or nobootwait, keep the /etc/fstab file in sync with the devices that are attached to your VM and remove these entries before you create your boot disk snapshot or detach the disk.
+
 ## Setting up desktop environment on Compute Engine
 
 In my humble opinion, life is hard without desktop environment so let's set up Chrome Remote Desktop
@@ -97,7 +201,7 @@ In my humble opinion, life is hard without desktop environment so let's set up C
 
 For remote connections over slower networks I recommended Xfce because it has minimal graphical elements and few animations.
 
-1. After the instance has been created, connect to your **openmx** instance by clicking the SSH button in the instance list :
+1. After the instance has been created, connect to your **openmx** instance by clicking the **SSH** button in the instance list :
 
     &nbsp;<DynamicImg filename="2022-03-11-01-58-console.cloud.google.com-ssh-button.png" class="inline-block"/>
 
@@ -180,7 +284,7 @@ To start the remote desktop server, you need to have an authorization key for th
     >You can know your hostname by looking at your SSH like this `username@hostname`, if you name your VM instance **openmx** your hostname is `openmx` <br>
 
 6. Copy the command to the SSH window that's connected to your instance, and then run the command.
-7. When you're prompted, enter a 6-digit PIN. This number will be used for additional authorization when you connect later.
+7. When you're prompted, enter a **6-digit PIN**. This number will be used for additional authorization when you connect later.
     You might see errors like `No net_fetcher` or `Failed to read`. You can ignore these errors.
 
 8. Verify that the service is running using the following command.
@@ -241,8 +345,8 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
 ### Before you begin
 
-1. Connect to your **openmx** instance by clicking the SSH button in the instance list
-2. In the SSH window connected to your VM instance, update the package manager data and install build-essential and library package that openmx need to build
+1. Connect to your **openmx** instance by clicking the **SSH** button in the instance list
+2. In the SSH window connected to your VM instance or your terminal, update the package manager data and install build-essential and library package that openmx need to build
 
     ```shell
     sudo apt update
