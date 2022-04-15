@@ -9,7 +9,7 @@ cover:
   alt: 'Using OpenMX on Google Compute Engine cover image'
   caption: 'Edited Photo by Me'
 createdAt: 2022-03-11T09:42:00Z
-updatedAt: 2022-04-04T21:26:40Z
+updatedAt: 2022-04-15T14:28:40Z
 tags:
   - tech
   - openMX
@@ -338,6 +338,13 @@ If this app is not installed, do the following :
 2. In the **Install App** section, click **Begin**.
 3. Click **Install**.
 The remote desktop session reopens in its own application window.
+
+#### Disable screensavers and lock screens
+
+Because you're accessing your desktop from a remote computer, it's normally not necessary to use a screensaver or screen locker, so you can disable these. If this screensaver is not fisabled, it will take some cpu resources
+
+1. In the **Applications** menu, select **Settings** then select **Screensaver**.
+2. Set **Mode** to **Disable Screen Saver**.
 
 Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
