@@ -20,7 +20,7 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.21.1",
+    "core-js": "^3.22.6",
     "nuxt": "^2.15.7",
     "nuxt-precompress": "^0.5.9",
     "sanitize-html": "^2.7.0",
