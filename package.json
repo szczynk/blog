@@ -17,7 +17,7 @@
     "deploy": "npm run generate && npm run pushdir"
   },
   "dependencies": {
-    "@nuxt/content": "^1.14.0",
+    "@nuxt/content": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.21.1",
