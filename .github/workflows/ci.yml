@@ -13,7 +13,7 @@ env:
   TWITTER: szczynk
   GITHUB: szczynk/blog
   TITLE: "Szczynk's Blog"
-  DESCRIPTION: 'My personal blog about anything that i need to talk.'
+  DESCRIPTION: "My personal blog about anything that i need to talk."
 
 jobs:
   ci:
@@ -35,7 +35,7 @@ jobs:
           check-latest: true
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v3.0.2
+        uses: actions/cache@v3.0.3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
