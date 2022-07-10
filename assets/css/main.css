@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 img[lazy='loading'] {
   filter: blur(15px);
 }

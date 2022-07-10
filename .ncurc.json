@@ -1,0 +1,4 @@
+{
+  "reject": ["@nuxt/content","@nuxtjs/color-mode","imagemin-mozjpeg","imagemin-svgo","@nuxtjs/tailwindcss","webpack","responsive-loader"],
+  "format": ["group"]
+}
