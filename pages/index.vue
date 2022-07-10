@@ -1,29 +1,29 @@
 <template>
   <div>
-    <Breadcrumb class="pt-40 pb-40" />
+    <BreadcrumbItem class="pt-40 pb-40" />
     <div class="block text-sm md:text-base">
       <TabsWrapper>
-        <Tab
+        <TabItem
           title="tech"
           :is-active="activeTab === 'tech'"
           :on-click-tab="clickTab"
         />
-        <Tab
+        <TabItem
           title="game"
           :is-active="activeTab === 'game'"
           :on-click-tab="clickTab"
         />
-        <Tab
+        <TabItem
           title="all"
           :is-active="activeTab === 'all'"
           :on-click-tab="clickTab"
         />
-        <Tab
+        <TabItem
           title="personal"
           :is-active="activeTab === 'personal'"
           :on-click-tab="clickTab"
         />
-        <Tab
+        <TabItem
           title="misc"
           :is-active="activeTab === 'misc'"
           :on-click-tab="clickTab"

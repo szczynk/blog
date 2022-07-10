@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Breadcrumb subtitle="Find" class="pt-16 pb-16" />
+    <BreadcrumbItem subtitle="Find" class="pt-16 pb-16" />
     <div class="block text-sm md:text-base">
       <TabsWrapper>
-        <Tab :title="activeTab" />
+        <TabItem :title="activeTab" />
       </TabsWrapper>
       <TabsContent>
         <div>
