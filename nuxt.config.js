@@ -129,7 +129,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prismjs/themes/prism-okaidia.css',
+        theme: 'prismjs/themes/prism-okaidia.min.css',
       },
     },
   },

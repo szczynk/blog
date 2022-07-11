@@ -66,11 +66,7 @@
                   duration-150
                 "
                 aria-label="Color Mode"
-                @click="
-                  $colorMode.value === 'dark'
-                    ? ($colorMode.preference = 'light')
-                    : ($colorMode.preference = 'dark')
-                "
+                @click="changeTheme()"
               >
                 <client-only placeholder="...">
                   <IconSun
@@ -160,6 +156,28 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    changeTheme() {
+      this.$colorMode.value === 'dark'
+        ? (this.$colorMode.preference = 'light')
+        : (this.$colorMode.preference = 'dark')
+
+      const g = document.querySelector('iframe.giscus-frame')
+      if (g) {
+        g.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme:
+                  localStorage.getItem('nuxt-color-mode') === 'dark'
+                    ? 'light'
+                    : 'dark',
+              },
+            },
+          },
+          'https://giscus.app'
+        )
+      }
+    },
     handleScroll() {
       this.scrolled = window.scrollY > 0
     },

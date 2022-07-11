@@ -103,7 +103,7 @@
           <span v-if="result.category" class="font-bold">
             {{ result.category }}
           </span>
-          <IconChevronRight v-if="result.category" class="w-3 h-3 mx-1" />
+          <IconChevronRight class="w-3 h-3 mx-1" />
           {{ result.title }}
         </NuxtLink>
       </li>

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './content/**/*.md',
     './components/**/*.{js,vue,ts}',
@@ -12,6 +13,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
   safelist: ['dark', 'dark-mode'],
 }

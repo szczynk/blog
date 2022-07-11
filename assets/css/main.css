@@ -32,12 +32,14 @@ figure img[lazy='loading'] {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1.875rem;
+  scroll-margin-top: 72px;
 }
 
 .nuxt-content h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
+  scroll-margin-top: 72px;
 }
 
 .nuxt-content h4 {
@@ -111,6 +113,12 @@ figure img[lazy='loading'] {
   margin-bottom: 1rem;
 }
 
+.nuxt-content .nuxt-content-highlight pre {
+  position: relative;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
 .nuxt-content .nuxt-content-highlight > .filename {
   position: absolute;
   right: 0;
@@ -127,4 +135,10 @@ figure img[lazy='loading'] {
 .nuxt-content-container .is-editing .dark .dark-mode .nuxt-content-editor {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+#comments::part(iframe) {
+  max-width: 640px;
+  margin: auto;
+  display: flex;
 }
