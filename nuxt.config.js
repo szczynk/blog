@@ -141,6 +141,11 @@ export default {
 
   // @nuxtjs/moment module options
   moment: {
+    timezone: {
+      matchZones: /Asia\/Jakarta/,
+      startYear: 2022,
+      endYear: 2042
+    },
     defaultTimezone: 'Asia/Jakarta',
   },
 

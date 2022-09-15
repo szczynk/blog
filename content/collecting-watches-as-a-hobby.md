@@ -32,7 +32,7 @@ A month ago, I researched and searched for the most suitable watch, from the pri
 
 I finally chose the [Seiko 5 Sports SRPG33K1 Automatic Green Dial Green Nylon Strap watch](https://www.seikowatches.com/global-en/products/5sports/srpg33k1). It is a kind of everyday field's watch that have military style on it. You can see the specifications and prices for yourself. I chose this watch not only to replace my late father's automatic watch but also as a milestone for me and a reminder that this year I need graduate. Wish me luck.
 
-&#x200B;<DynamicImg filename="IMG20220319190646.jpg" class="block" />
+&#x200B;<DynamicImg filename="IMG20220319190646.png" class="block" />
 
 My photo kinda suck, innit? Well, I'm not a photographer either.
 
