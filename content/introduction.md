@@ -9,13 +9,13 @@ cover:
   alt: 'Introduction cover image'
   caption: 'Photo by <a href="https://google.com">Google Image</a>'
 createdAt: 2022-02-26T08:46:20Z
-updatedAt: 2022-02-27T12:14:07Z
+updatedAt: 2022-10-04T20:38:07Z
 tags:
   - personal
   - about me
 ---
 
-Hi, I'm **Szczynk** also called as **Bagus**, a final year student of physics degree specialized in material computational physics from State University of Jakarta. Currently working on undergraduate thesis about the effect of external electric field on electrical and magnetic properties of NiBr<sub>2</sub> monolayer based density functional theory (DFT). Wish me pass and publish this year.
+Hi, I'm **Szczynk** also called as **Bagus**, a recent graduate of bachelor of physics degree specialized in material computational physics from State University of Jakarta. I’m currently working on undergraduate thesis about The Impact of Adjusted Electric Field on The Electrical and Magnetic Properties of NiBr<sub>2</sub> Monolayer with Density Functional Theory (DFT). Wish me pass and publish this year. Interested on Web Development and DevOps. I’m currently learning scalable web service with Go.
 
 I started a blog because I don't like to write but i need to write as a self-reflection note about what I have achieved, currently, and will achieve or experience and also share a little bit of my thoughts, stories, ideas, and rants.
 
@@ -24,3 +24,5 @@ For a start, I'll be sharing my experiences in developing this website, [my resu
 And if you're interested in the source code of this website or just want to take a peek under the hood, [it's completely open-source](https://github.com/szczynk/blog)!
 
 Stay tuned!
+
+TLDR: I use this introduction at github profile and linkedin profile, probably i need to update it all

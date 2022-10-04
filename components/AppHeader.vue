@@ -68,7 +68,7 @@
                 aria-label="Color Mode"
                 @click="changeTheme()"
               >
-                <client-only placeholder="...">
+                <client-only placeholder="......">
                   <IconSun
                     v-if="$colorMode.value === 'light'"
                     class="w-6 h-6"

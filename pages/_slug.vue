@@ -9,7 +9,7 @@
       </h2>
       <div class="text-sm mb-3">
         <a
-          :href="$config.resumeURL"
+          :href="$config.githubURL"
           class="text-black font-bold mr-2 dark:text-white"
         >
           {{ $config.twitter }}
@@ -149,7 +149,7 @@ export default {
       author: {
         '@type': 'Person',
         name: this.$config.twitter,
-        url: this.$config.resumeURL,
+        url: this.$config.githubURL,
       },
       datePublished: dateCreated.toISOString(),
       dateModified: dateChanged.toISOString(),

@@ -3,6 +3,7 @@ export default {
     baseURL: process.env.BASE_URL,
     resumeURL: `${process.env.BASE_URL}/resume/`,
     blogURL: `${process.env.BASE_URL}/blog/`,
+    githubURL: process.env.GITHUB_URL,
     twitter: process.env.TWITTER,
     github: process.env.GITHUB,
     title: process.env.TITLE,

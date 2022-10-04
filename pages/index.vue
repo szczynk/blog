@@ -114,7 +114,7 @@ export default {
       author: {
         '@type': 'Person',
         name: this.$config.twitter,
-        url: this.$config.resumeURL,
+        url: this.$config.githubURL,
       },
       potentialAction: {
         '@type': 'SearchAction',

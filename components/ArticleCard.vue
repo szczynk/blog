@@ -66,7 +66,7 @@
               </NuxtLink>
               <div class="text-sm mb-3">
                 <a
-                  :href="$config.resumeURL"
+                  :href="$config.githubURL"
                   class="text-black font-bold mr-2 dark:text-white"
                 >
                   {{ $config.twitter }}
