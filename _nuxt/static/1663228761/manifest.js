@@ -1,1 +1,0 @@
-__NUXT_JSONP__("manifest.js", {routes:["\u002F","\u002Fcollecting-watches-as-a-hobby","\u002Fusing-openmx-on-google-compute-engine","\u002Fintroduction","\u002Ftag\u002Fpersonal","\u002Ftag\u002Fwatch","\u002Ftag\u002Fhobby","\u002Ftag\u002Ftech","\u002Ftag\u002FopenMX","\u002Ftag\u002Fgoogle cloud platform","\u002Ftag\u002Fcompute Engine","\u002Ftag\u002Fabout me"]})
