@@ -71,4 +71,4 @@ Maybe I'm biased, but it is my perspective, my point of view. I appreciated if y
 
 ## Closing
 
-What can I say now, I stuck at this rabbit hole and keep digging in it though, but remember, alway look up at the light.
+What can I say now, I stuck at this rabbit hole and keep digging in it though, but remember, always look up at the light.

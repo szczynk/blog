@@ -1,19 +1,25 @@
 <template>
   <div class="container mx-auto px-4 py-4">
-    <div class="flex flex-wrap justify-center">
-      <div class="">
+    <div>
+      <div class="flex justify-center">
         <div
           class="
             flex
             break-words
-            border
+            box-border
+            border-2
             rounded-lg
             shadow-md
+            border-gray-300
             dark:border-gray-700
           "
         >
           <!-- article image -->
-          <div v-if="blog.cover" v-lazy-container="{ selector: 'img' }">
+          <div
+            v-if="blog.cover"
+            v-lazy-container="{ selector: 'img' }"
+            class="article-img"
+          >
             <img
               class="
                 rounded-l-lg
@@ -32,7 +38,7 @@
               :alt="blog.cover.alt ? blog.cover.alt : blog.title"
             />
           </div>
-          <div class="max-w-xs md:max-w-md">
+          <div class="max-w-[300px] md:max-w-md">
             <div class="flex-auto p-4">
               <NuxtLink
                 :to="{ name: 'slug', params: { slug: blog.slug } }"
@@ -53,16 +59,18 @@
               <NuxtLink
                 v-if="blog.subtitle"
                 :to="{ name: 'slug', params: { slug: blog.slug } }"
-                tag="p"
-                class="
+              >
+                <p
+                  class="
                   text-gray-700
                   mb-3
                   dark:text-gray-400
                   truncate
                   md:whitespace-normal
                 "
-              >
-                {{ blog.subtitle }}
+                >
+                  {{ blog.subtitle }}
+                </p>
               </NuxtLink>
               <div class="text-sm mb-3">
                 <a

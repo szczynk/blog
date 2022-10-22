@@ -65,8 +65,6 @@ export default {
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt/postcss8
     '@nuxt/postcss8',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
     // https://color-mode.nuxtjs.org
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/moment-module
