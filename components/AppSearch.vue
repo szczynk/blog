@@ -85,6 +85,7 @@
         <NuxtLink
           :to="result.slug"
           class="
+            interactable
             flex
             px-4
             py-2
@@ -98,6 +99,7 @@
             'text-primary-500 bg-gray-200 dark:bg-gray-800':
               focusIndex === index,
           }"
+          data-type="link"
           @click="focus = false"
         >
           <span v-if="result.category" class="font-bold">

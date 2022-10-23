@@ -1,6 +1,6 @@
 ---
 title: "Collecting Watches As a Hobby"
-subtitle: "A perspective of a beginner learning about watches. It just gorgeous having an accessory that you know all about."
+subtitle: "A perspective of a beginner learning about watches. It just gorgeous having an accessory that you know about."
 lead: "The perspective of a beginner learning about watches. Part of the reason was wanting to be able to repair my father's watch myself and the other reasons was it just gorgeous having an accessory that you know all about."
 description: "The perspective of a beginner learning about watches. Part of the reason was wanting to be able to repair my father's watch myself and the other reasons was it just gorgeous having an accessory that you know all about."
 cover:

@@ -24,7 +24,11 @@
             </h1>
           </article>
           <div class="error-buttons">
-            <NuxtLink to="/" class="button">
+            <NuxtLink
+              to="/"
+              class="interactable button"
+              data-type="link"
+            >
               <span class="button-text">Go back to homepage</span>
             </NuxtLink>
           </div>

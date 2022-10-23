@@ -43,6 +43,7 @@
               <NuxtLink
                 :to="{ name: 'slug', params: { slug: blog.slug } }"
                 class="
+                  interactable
                   block
                   mb-3
                   text-black
@@ -53,12 +54,15 @@
                   md:whitespace-normal
                   cursor-pointer
                 "
+                data-type="link"
               >
                 {{ blog.title }}
               </NuxtLink>
               <NuxtLink
                 v-if="blog.subtitle"
                 :to="{ name: 'slug', params: { slug: blog.slug } }"
+                class="interactable"
+                data-type="link"
               >
                 <p
                   class="
@@ -90,6 +94,7 @@
                   :key="tag"
                   :to="`/tag/${tag}`"
                   class="
+                    interactable
                     inline-flex
                     items-center
                     bg-gray-200
@@ -103,6 +108,7 @@
                     dark:bg-gray-700
                     capitalize
                   "
+                  data-type="link"
                 >
                   {{ tag }}
                 </NuxtLink>

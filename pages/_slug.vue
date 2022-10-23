@@ -33,6 +33,7 @@
           :key="tag"
           :to="`/tag/${tag}`"
           class="
+            interactable
             inline-flex
             items-center
             bg-gray-200
@@ -46,6 +47,7 @@
             dark:bg-gray-700
             capitalize
           "
+          data-type="link"
         >
           {{ tag }}
         </NuxtLink>
@@ -75,7 +77,11 @@
             class="list-disc pl-1"
             :class="{ 'ml-5': link.depth === 3 }"
           >
-            <NuxtLink :to="`#${link.id}`" class="no-underline">
+            <NuxtLink
+              :to="`#${link.id}`"
+              class="interactable no-underline"
+              data-type="link"
+            >
               {{ link.text }}
             </NuxtLink>
           </li>

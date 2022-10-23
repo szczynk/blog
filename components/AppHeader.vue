@@ -18,8 +18,9 @@
         <div class="lg:w-1/5 flex items-center pr-4" @click.stop="noop">
           <NuxtLink
             :to="'/'"
-            class="flex-shrink-0 flex-1 font-bold text-xl"
+            class="interactable flex-shrink-0 flex-1 font-bold text-xl"
             :aria-label="`${$config.title} Logo`"
+            data-type="link"
           >
             <span
               v-if="!logo"
