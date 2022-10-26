@@ -132,7 +132,7 @@ figure img[lazy='loading'] {
   color: #fff;
 }
 
-.nuxt-content-container .is-editing .dark .dark-mode .nuxt-content-editor {
+.nuxt-content-container .nuxt-content-editor {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }

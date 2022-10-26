@@ -9,12 +9,12 @@ cover:
   alt: 'Using OpenMX on Google Compute Engine cover image'
   caption: 'Edited Photo by Me'
 createdAt: 2022-03-11T09:42:00Z
-updatedAt: 2022-04-15T14:28:40Z
+updatedAt: 2022-10-26T14:28:40Z
 tags:
   - tech
   - openMX
   - google cloud platform
-  - compute Engine
+  - compute engine
 ---
 
 ## Introduction
@@ -350,7 +350,41 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
 ## Installing OpenMX on Google Compute Engine
 
-### Before you begin
+### Installing OpenMX from Github Release
+
+1. Connect to your **openmx** instance by clicking the **SSH** button in the instance list
+2. In the SSH window connected to your VM instance or your terminal, update the package manager data
+
+    ```shell
+    sudo apt update
+    ```
+
+    ><NoteBlockquote></NoteBlockquote>
+    >You need SSH window to get **sudo** command
+
+    Do not close your SSH window yet
+3. Download OpenMX version 3.9 with patch version 3.9.9 from github release
+
+    ```shell
+    wget https://github.com/Ncmexp2717/OpenMX-deb/releases/download/v3.9.9-2/openmx_3.9.9-2_amd64.deb
+    ```
+
+4. Install them with ```apt``` or ```dpkg```
+
+    ```shell
+    sudo apt install ./openmx_3.9.9-2_amd64.deb
+    ```
+
+5. Connect your VM instance using the Chrome Remote Desktop web application by clicking the name of the remote desktop instance for example **openmx**.
+6. OpenMX has been installed and you can use it on **desktop** terminal.
+
+><NoteBlockquote></NoteBlockquote>
+>
+> - The default value for a input keyword of ```DATA.PATH``` is changed to ```/usr/share/openmx/DFT_DATA19```.
+> - The 2019 database of fully relativistic pseudopotentials (VPS) and pseudo-atomic orbitals (PAO), which could be an input data of ```openmx```. It is installed on ```/usr/share/openmx/DFT_DATA19```.
+> - Examples of inputs and computational results are also contained. They are installed on ```/usr/share/openmx/work```.
+
+### Installing OpenMX from source
 
 1. Connect to your **openmx** instance by clicking the **SSH** button in the instance list
 2. In the SSH window connected to your VM instance or your terminal, update the package manager data and install build-essential and library package that openmx need to build
@@ -378,20 +412,18 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
 
 4. Connect your VM instance using the Chrome Remote Desktop web application by clicking the name of the remote desktop instance for example **openmx**.
 
-### Installing OpenMX on desktop enviroment
-
-1. Click the **File Manager** :
+5. Click the **File Manager** :
 
     &nbsp;<DynamicImg filename="2022-03-11-14-08-chrome.remote.dekstop-file-manager.png" class="inline-block"/>
 
-2. **Right click** and then click **Extract Here** on **openmx3.9.tar.gz**
-3. **Right click** and then click **Cut** on **patch3.9.9.tar.gz**
-4. Navigate to `openmx3.9 / source` folder and paste **patch3.9.9.tar.gz**
-5. **Right click** and then click **Extract Here** on **patch3.9.9.tar.gz**
-6. Click **Yes** or **Replace** to patch the source code
-7. Find **kpoint.in** file and move to `openmx3.9 / work` folder
-8. Go back to `openmx3.9 / source` folder and find **makefile** file
-9. Edit **makefile** file by **Right click**, then click **Open With "Mousepad"** and Change line 8 to line 14 with this config
+6. **Right click** and then click **Extract Here** on **openmx3.9.tar.gz**
+7. **Right click** and then click **Cut** on **patch3.9.9.tar.gz**
+8. Navigate to `openmx3.9 / source` folder and paste **patch3.9.9.tar.gz**
+9. **Right click** and then click **Extract Here** on **patch3.9.9.tar.gz**
+10. Click **Yes** or **Replace** to patch the source code
+11. Find **kpoint.in** file and move to `openmx3.9 / work` folder
+12. Go back to `openmx3.9 / source` folder and find **makefile** file
+13. Edit **makefile** file by **Right click**, then click **Open With "Mousepad"** and Change line 8 to line 14 with this config
 
     ```text
     # MKLROOT = /opt/intel/mkl
@@ -403,8 +435,8 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
     LIB= -L/usr/lib -L/usr/lib/x86_64-linux-gnu -llapack -lblas -lfftw3 -lmpi -lmpi_mpifh -lgfortran -lscalapack-openmpi
     ```
 
-10. Open Terminal at blank space inside file manager by **Right click** and then click **Open Terminal Here**
-11. Build openmx using the following command.
+14. Open Terminal at blank space inside file manager by **Right click** and then click **Open Terminal Here**
+15. Build openmx using the following command.
 
     ```shell
     make clean
@@ -415,11 +447,13 @@ Congrats, you have **Compute Engine** with **Xfce desktop Environment**
     It takes a few moments to build openmx.
     You might see some errors. You can ignore these errors.
 
-12. Finally grant executable permission on **openmx** :
+16. Finally grant executable permission on **openmx** :
 
     ```shell
     chmod +x openmx
     ```
+
+17. OpenMX has been installed and you can use it on **desktop** terminal.
 
 ### Optional : Building other supportive program on OpenMX source
 
