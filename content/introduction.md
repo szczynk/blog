@@ -25,7 +25,7 @@ I'm currently learning scalable web services with Go. Now I'm looking for opport
 
 I started a blog because I don't like to write but i need to write as a self-reflection note about what I have achieved, currently, and will achieve or experience and also share a little bit of my thoughts, stories, ideas, and rants.
 
-For a start, I'll be sharing my experiences in developing [this website](https://github.com/szczynk/blog), [my resume](https://szczynk.github.io/resume/), [~~Lookerku~~](https://test.lookerku.com/), [Halo10-io Backend](https://www.halo10-io.com/), and [MyCikoding Backend](mycikoding.vercel.app). I developed these websites using Node.js, Express.js, MongoDB, Nuxt.js, Vue.js and other popular open-source libraries.
+For a start, I'll be sharing my experiences in developing [this website](https://github.com/szczynk/blog), [my resume](https://szczynk.github.io/resume/), [~~Lookerku~~](https://test.lookerku.com/), [Halo10-io Backend](https://www.halo10-io.com/), and [MyCikoding Backend](https://mycikoding.vercel.app). I developed these websites using Node.js, Express.js, MongoDB, Nuxt.js, Vue.js and other popular open-source libraries.
 
 And if you're interested in the source code of this website or just want to take a peek under the hood, [it's completely open-source](https://github.com/szczynk/blog)!
 

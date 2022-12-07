@@ -1,4 +1,14 @@
 {
-  "reject": ["@nuxt/content","@nuxtjs/color-mode","imagemin-mozjpeg","imagemin-svgo","@nuxtjs/tailwindcss","webpack","responsive-loader"],
+  "reject": [
+    "nuxt",
+    "@nuxtjs/eslint-config",
+    "@nuxt/content",
+    "@nuxtjs/color-mode",
+    "imagemin-mozjpeg",
+    "imagemin-svgo",
+    "@nuxtjs/tailwindcss",
+    "webpack",
+    "responsive-loader"
+  ],
   "format": ["group"]
 }

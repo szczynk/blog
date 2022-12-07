@@ -33,6 +33,8 @@
           target="_blank"
           rel="noopener"
           aria-label="Built With Nuxt"
+          data-type="link"
+          class="interactable"
         >
           <BuiltWithNuxtLight class="h-4 light-img" />
           <BuiltWithNuxtDark class="h-4 dark-img" />
@@ -43,7 +45,8 @@
         Made with ❤️ by &nbsp;
         <a
           href="https://github.com/sanguinary-bus"
-          class="text-blue-700 dark:text-blue-300"
+          class="interactable text-blue-700 dark:text-blue-300"
+          data-type="link"
         >
           sanguinary-bus
         </a>

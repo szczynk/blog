@@ -85,7 +85,9 @@
               rel="noopener noreferrer"
               title="Twitter"
               name="Twitter"
+              data-type="link"
               class="
+                interactable
                 text-gray-700
                 dark:text-gray-300
                 hover:text-primary-500
@@ -103,7 +105,9 @@
               rel="noopener noreferrer"
               title="Github"
               name="Github"
+              data-type="link"
               class="
+                interactable
                 text-gray-700
                 dark:text-gray-300
                 hover:text-primary-500
