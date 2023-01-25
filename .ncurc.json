@@ -8,7 +8,9 @@
     "imagemin-svgo",
     "@nuxtjs/tailwindcss",
     "webpack",
-    "responsive-loader"
+    "responsive-loader",
+    "sanitize-html",
+    "core-js"
   ],
   "format": ["group"]
 }
