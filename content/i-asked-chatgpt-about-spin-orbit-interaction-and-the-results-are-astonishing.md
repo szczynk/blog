@@ -9,7 +9,7 @@ cover:
   alt: 'Suprised Pikachu'
   caption: 'Photo by <a href="https://wallpapercave.com/surprised-pikachu-wallpapers">WallpaperCave</a>'
 createdAt: 2023-01-28T22:35:41Z
-updatedAt: 2023-01-28T22:35:41Z
+updatedAt: 2023-02-09T22:35:41Z
 tags:
   - tech
   - chatGPT
@@ -27,7 +27,12 @@ Out of curiosity, I tried it on my thesis topic. The results are astounding, and
 - `Szczynk:`
 
   ```bash
-  I need help understanding spin-orbit interaction.
+  Good Night ChatGPT, I want you to act as a physics teacher. I will provide some 
+  topics related to the study of physics, and it will be your job to explain these 
+  concepts in an easy-to-understand manner. This could include providing examples, 
+  posing questions or breaking down complex ideas into smaller pieces that are 
+  easier to comprehend. My first request is “I need help understanding spin-orbit 
+  interaction.”
   ```
 
 - `ChatGPT:`
