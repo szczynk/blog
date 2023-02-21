@@ -1,12 +1,12 @@
 name: ci
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [master]
+    branches:
+      - master
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 env:
   BASE_URL: https://szczynk.github.io
@@ -14,7 +14,7 @@ env:
   TWITTER: szczynk
   GITHUB: szczynk/blog
   TITLE: "Szczynk's Blog"
-  DESCRIPTION: "My personal blog about anything that i need to talk."
+  DESCRIPTION: 'My personal blog about anything that i need to talk.'
 
 jobs:
   ci:
@@ -23,13 +23,13 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [lts/gallium]
 
     steps:
-      - name: Checkout 🛎
+      - name: Checkout 🛎️
         uses: actions/checkout@master
 
-      - name: Setup node env 🏗
+      - name: Setup node env 🏗️
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -49,10 +49,10 @@ jobs:
       - name: Run linter 👀
         run: npm run lint
 
-      - name: Generate
+      - name: Generate 💻
         run: npm run generate
 
-      - name: Deploy
+      - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}

@@ -3,16 +3,7 @@
     <div>
       <div class="flex justify-center">
         <div
-          class="
-            flex
-            break-words
-            box-border
-            border-2
-            rounded-lg
-            shadow-md
-            border-gray-300
-            dark:border-gray-700
-          "
+          class="flex break-words box-border border-2 rounded-lg shadow-md border-gray-300 dark:border-gray-700"
         >
           <!-- article image -->
           <div
@@ -21,14 +12,7 @@
             class="article-img"
           >
             <img
-              class="
-                rounded-l-lg
-                shadow-md
-                h-full
-                w-[360px]
-                md:w-[360px]
-                lg:h-60
-              "
+              class="rounded-l-lg shadow-md h-full w-[360px] md:w-[360px] lg:h-60"
               :data-src="
                 require(`@/assets/img/${blog.cover.thumb}?resize&sizes[]=360`)
               "
@@ -42,18 +26,7 @@
             <div class="flex-auto p-4">
               <NuxtLink
                 :to="{ name: 'slug', params: { slug: blog.slug } }"
-                class="
-                  interactable
-                  block
-                  mb-3
-                  text-black
-                  font-bold
-                  dark:text-white
-                  hover:text-underline
-                  truncate
-                  md:whitespace-normal
-                  cursor-pointer
-                "
+                class="interactable block mb-3 text-black font-bold dark:text-white hover:text-underline truncate md:whitespace-normal cursor-pointer"
                 data-type="link"
               >
                 {{ blog.title }}
@@ -65,13 +38,7 @@
                 data-type="link"
               >
                 <p
-                  class="
-                  text-gray-700
-                  mb-3
-                  dark:text-gray-400
-                  truncate
-                  md:whitespace-normal
-                "
+                  class="text-gray-700 mb-3 dark:text-gray-400 truncate md:whitespace-normal"
                 >
                   {{ blog.subtitle }}
                 </p>
@@ -93,21 +60,7 @@
                   v-for="tag in blog.tags"
                   :key="tag"
                   :to="`/tag/${tag}`"
-                  class="
-                    interactable
-                    inline-flex
-                    items-center
-                    bg-gray-200
-                    rounded-full
-                    px-3
-                    py-1
-                    text-sm
-                    font-semibold
-                    mr-2
-                    mb-2
-                    dark:bg-gray-700
-                    capitalize
-                  "
+                  class="interactable inline-flex items-center bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 dark:bg-gray-700 capitalize"
                   data-type="link"
                 >
                   {{ tag }}

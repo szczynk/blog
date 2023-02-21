@@ -1,31 +1,9 @@
 <template>
   <footer
-    class="
-      h-16
-      relative
-      w-full
-      border-t
-      z-20
-      bg-white
-      text-gray-700
-      dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300
-    "
+    class="h-16 relative w-full border-t z-20 bg-white text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
   >
     <div
-      class="
-        h-full
-        w-full
-        container
-        mx-auto
-        px-4
-        lg:px-8
-        flex
-        items-center
-        text-center
-        justify-evenly
-        text-xs
-        md:text-base
-      "
+      class="h-full w-full container mx-auto px-4 lg:px-8 flex items-center text-center justify-evenly text-xs md:text-base"
     >
       <div class="hidden sm:flex mx-2">
         <a
@@ -65,6 +43,3 @@ export default {
   },
 }
 </script>
-
-<style>
-</style>

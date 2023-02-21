@@ -9,8 +9,10 @@ export default {
     title: process.env.TITLE,
     description: process.env.DESCRIPTION,
   },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
   router: {
     base: '/blog/',
   },
@@ -63,8 +65,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://github.com/nuxt/postcss8
-    '@nuxt/postcss8',
+    // https://go.nuxtjs.dev/stylelint
+    '@nuxtjs/stylelint-module',
     // https://color-mode.nuxtjs.org
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/moment-module
@@ -88,12 +90,13 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'Szcznyk Blog',
-      short_name: 'Szcznyk Blog',
+      lang: 'en',
+      name: process.env.TITLE,
+      short_name: process.env.TITLE,
       background_color: '#ffffff',
     },
     meta: {
-      name: 'Szcznyk Blog',
+      name: process.env.TITLE,
       theme_color: '#115173',
     },
   },
@@ -128,7 +131,10 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prismjs/themes/prism-okaidia.min.css',
+        theme:
+          process.env.NODE_ENV === 'production'
+            ? 'prismjs/themes/prism-okaidia.min.css'
+            : 'prismjs/themes/prism-okaidia.css',
       },
     },
   },
@@ -143,7 +149,7 @@ export default {
     timezone: {
       matchZones: /Asia\/Jakarta/,
       startYear: 2022,
-      endYear: 2042
+      endYear: 2042,
     },
     defaultTimezone: 'Asia/Jakarta',
   },
@@ -181,12 +187,21 @@ export default {
     },
   },
 
+  watchers: {
+    // Temporary fix: https://github.com/nuxt-community/tailwindcss-module/issues/359
+    webpack: {
+      ignored: ['**/*.eslintcache', '**/.git/**'],
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
       },
     },
   },

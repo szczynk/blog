@@ -7,12 +7,7 @@
             <!-- Bread Title Start -->
             <div class="bread-title">
               <h1
-                class="
-                  text-7xl
-                  pb-2
-                  [text-shadow:0.25rem_0.25rem_0.25rem_rgba(0,0,0,0.5)]
-                  dark:[text-shadow:0.25rem_0.25rem_0.25rem_rgba(255,255,255,0.5)]
-                "
+                class="text-7xl pb-2 [text-shadow:0.25rem_0.25rem_0.25rem_rgba(0,0,0,0.5)] dark:[text-shadow:0.25rem_0.25rem_0.25rem_rgba(255,255,255,0.5)]"
               >
                 {{ title }}
               </h1>
@@ -48,6 +43,3 @@ export default {
   },
 }
 </script>
-
-<style>
-</style>

@@ -1,6 +1,6 @@
 ---
-title: "My Experience With Golang"
-subtitle: "A reflection on my experience when learning Golang. No JavaScript with extra steps."
+title: 'My Experience With Golang'
+subtitle: 'A reflection on my experience when learning Golang. No JavaScript with extra steps.'
 lead: "A reflection on my experience with Golang It's kind of worth learning after I realized it's statically typed, so I didn't need to learn TypeScript."
 description: "A reflection on my experience with Golang It's kind of worth learning after I realized it's statically typed, so I didn't need to learn TypeScript."
 cover:

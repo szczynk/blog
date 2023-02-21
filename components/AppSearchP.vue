@@ -84,7 +84,7 @@ export default {
         return
       }
       this.searching = true
-      this.results = await this.$content()
+      this.results = await this.$content('p')
         .only(['title', 'subtitle', 'slug'])
         .limit(6)
         .search(q)

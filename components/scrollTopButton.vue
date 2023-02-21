@@ -1,30 +1,10 @@
 <template>
   <div
     ref="scrollTopButton"
-    class="
-      invisible
-      sticky
-      w-full
-      flex
-      justify-end
-      bottom-0
-      pb-4
-      pr-4
-      lg:pr-16
-      transition
-    "
+    class="invisible sticky w-full flex justify-end bottom-0 pb-4 pr-4 lg:pr-16 transition"
   >
     <div
-      class="
-        rounded-md
-        cursor-pointer
-        border
-        bg-white
-        text-gray-700
-        border-gray-800
-        dark:border-gray-300 dark:bg-gray-900 dark:text-gray-300
-        transition
-      "
+      class="rounded-md cursor-pointer border bg-white text-gray-700 border-gray-800 dark:border-gray-300 dark:bg-gray-900 dark:text-gray-300 transition"
     >
       <button
         role="button"
@@ -66,6 +46,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style>
-</style>

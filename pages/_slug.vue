@@ -32,21 +32,7 @@
           v-for="tag in blog.tags"
           :key="tag"
           :to="`/tag/${tag}`"
-          class="
-            interactable
-            inline-flex
-            items-center
-            bg-gray-200
-            rounded-full
-            px-3
-            py-1
-            text-xs
-            font-semibold
-            mr-2
-            mb-2
-            dark:bg-gray-700
-            capitalize
-          "
+          class="interactable inline-flex items-center bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2 dark:bg-gray-700 capitalize"
           data-type="link"
         >
           {{ tag }}

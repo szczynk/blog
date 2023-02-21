@@ -35,7 +35,7 @@
           </NuxtLink>
         </div>
         <div class="flex-1 flex justify-start w-4/6">
-          <AppSearch class="hidden sm:block" />
+          <AppSearchP class="hidden sm:block" />
         </div>
         <div
           class="lg:w-1/5 flex items-center justify-between pl-4 lg:pl-8"

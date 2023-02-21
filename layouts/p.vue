@@ -9,7 +9,7 @@
     >
       <IconTrailer id="trailer-icon" ref="trailer-icon" class="m-0" />
     </div>
-    <AppHeader />
+    <AppHeaderP />
 
     <main class="container mx-auto px-4 lg:px-8">
       <Nuxt />

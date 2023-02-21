@@ -1,5 +1,5 @@
 <template>
-  <button ref="copy" class="copy p-3">
+  <button ref="copy" class="copy">
     <IconClipboardCheck v-if="state === 'copied'" class="w-5 h-5" />
     <IconClipboardCopy v-else class="w-5 h-5" />
   </button>
@@ -9,16 +9,16 @@
 import Clipboard from 'clipboard'
 
 export default {
-  data () {
+  data() {
     return {
-      state: 'init'
+      state: 'init',
     }
   },
-  mounted () {
+  mounted() {
     const copyCode = new Clipboard(this.$refs.copy, {
-      target (trigger) {
+      target(trigger) {
         return trigger.previousElementSibling
-      }
+      },
     })
 
     copyCode.on('success', (event) => {
@@ -28,6 +28,6 @@ export default {
         this.state = 'init'
       }, 2000)
     })
-  }
+  },
 }
 </script>

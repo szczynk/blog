@@ -1,6 +1,6 @@
 ---
-title: "Collecting Watches As a Hobby"
-subtitle: "A perspective of a beginner learning about watches. It just gorgeous having an accessory that you know about."
+title: 'Collecting Watches As a Hobby'
+subtitle: 'A perspective of a beginner learning about watches. It just gorgeous having an accessory that you know about.'
 lead: "The perspective of a beginner learning about watches. Part of the reason was wanting to be able to repair my father's watch myself and the other reasons was it just gorgeous having an accessory that you know all about."
 description: "The perspective of a beginner learning about watches. Part of the reason was wanting to be able to repair my father's watch myself and the other reasons was it just gorgeous having an accessory that you know all about."
 cover:
@@ -56,8 +56,8 @@ I will edit this blog if I have this dress watch. Stay tuned.
 
 Maybe I'm biased, but it is my perspective, my point of view. I appreciated if you that the note.
 
-><NoteBlockquote></NoteBlockquote>
->Before buy another watch, this list may need to be considered.
+> <NoteBlockquote></NoteBlockquote>
+> Before buy another watch, this list may need to be considered.
 >
 > - The Price, whether it's new or secondhand, pick the watch that not cheaply made.
 > - The Watch type, whether it's dive watch, dress watch, pilot watch or field watch.

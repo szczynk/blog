@@ -1,14 +1,6 @@
 <template>
   <div
-    class="
-      flex
-      h-screen
-      items-center
-      justify-center
-      bg-white
-      text-gray-700
-      dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300
-    "
+    class="flex h-screen items-center justify-center bg-white text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
   >
     <div class="container">
       <div class="row">
@@ -24,11 +16,7 @@
             </h1>
           </article>
           <div class="error-buttons">
-            <NuxtLink
-              to="/"
-              class="interactable button"
-              data-type="link"
-            >
+            <NuxtLink to="/" class="interactable button" data-type="link">
               <span class="button-text">Go back to homepage</span>
             </NuxtLink>
           </div>
@@ -53,6 +41,3 @@ export default {
   },
 }
 </script>
-
-<style>
-</style>
