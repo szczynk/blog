@@ -41,6 +41,7 @@ export default defineComponent({
       }
     },
     scrollToTop() {
+      history.replaceState([], '', window.location.href.split('#')[0])
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
   },

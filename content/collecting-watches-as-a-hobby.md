@@ -64,8 +64,8 @@ Maybe I'm biased, but it is my perspective, my point of view. I appreciated if y
 > - The Movement, whether it's regular automatic, kinetic, regular quartz or solar quartz.
 > - The Dimension, like case width, case height, lug-to-lug width, and lug width.
 > - The Strap, like leather, nato, zulu, rubber, jubilee, or bracelet.
-> - The Other Specs, like case finish, dial and hands, crystal, water resistant, and lume.
 > - The Repairability.
+> - The Other Specs, like case finish, dial and hands, crystal, water resistant, and lume.
 > - The X-Factor that you have, yes, the subjective one, don't asked me on this one.
 > - The Brand.
 

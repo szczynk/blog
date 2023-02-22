@@ -43,7 +43,7 @@
         @mousedown="go"
       >
         <NuxtLink
-          :to="result.slug"
+          :to="{ name: 'p-slug', params: { slug: result.slug } }"
           class="interactable flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150"
           :class="{
             'text-primary-500 bg-gray-200 dark:bg-gray-800':
@@ -128,7 +128,7 @@ export default {
       }
       const result =
         this.focusIndex === -1 ? this.results[0] : this.results[this.focusIndex]
-      this.$router.push(result.slug)
+      this.$router.push(`p/${result.slug}`)
       // Unfocus the input and reset the query.
       this.$refs.search.blur()
       this.q = ''

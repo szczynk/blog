@@ -39,7 +39,7 @@
         </NuxtLink>
       </div>
       <figure
-        v-if="blog.cover"
+        v-if="blog.cover.thumb"
         v-lazy-container="{ selector: 'img' }"
         class="my-4 w-full"
       >
@@ -55,7 +55,7 @@
         />
         <!-- eslint-enable -->
       </figure>
-      <nav v-if="blog.toc.length > 1">
+      <nav v-if="blog.toc.length > 1" id="table-of-content">
         <ul class="px-4 my-4">
           <li
             v-for="link of blog.toc"
@@ -121,7 +121,10 @@ export default {
     const dateCreated = new Date(this.blog.createdAt)
     const dateChanged = new Date(this.blog.updatedAt)
 
-    const coverImage = require(`@/assets/img/${this.blog.cover.thumb}`)
+    const coverImage =
+      this.blog.cover.thumb !== ''
+        ? require(`@/assets/img/${this.blog.cover.thumb}`)
+        : ''
 
     let description = this.blog.title
     if (this.blog.description) {

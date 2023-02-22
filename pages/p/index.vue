@@ -11,7 +11,7 @@
       </TabsWrapper>
       <TabsContent>
         <div v-if="activeTab === 'all'">
-          <ArticleCardWrapper :blogs="allBlogs" />
+          <ArticleCardWrapperP :blogs="allBlogs" />
         </div>
       </TabsContent>
     </div>

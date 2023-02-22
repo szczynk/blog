@@ -31,7 +31,7 @@
         <NuxtLink
           v-for="tag in blog.tags"
           :key="tag"
-          :to="`/tag/${tag}`"
+          :to="`/p/tag/${tag}`"
           class="interactable inline-flex items-center bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2 dark:bg-gray-700 capitalize"
           data-type="link"
         >
@@ -39,7 +39,7 @@
         </NuxtLink>
       </div>
       <figure
-        v-if="blog.cover"
+        v-if="blog.cover.thumb"
         v-lazy-container="{ selector: 'img' }"
         class="my-4 w-full"
       >
@@ -55,7 +55,7 @@
         />
         <!-- eslint-enable -->
       </figure>
-      <nav v-if="blog.toc.length > 1">
+      <nav v-if="blog.toc.length > 1" id="table-of-content">
         <ul class="px-4 my-4">
           <li
             v-for="link of blog.toc"
@@ -85,8 +85,10 @@ import sanitizeHtml from 'sanitize-html'
 import AppCopyButton from '~/components/AppCopyButton'
 
 export default {
+  layout: 'p',
   async asyncData({ $content, params }) {
     const blog = await $content('p', params.slug).fetch()
+    // const blog = await $content(`p/${params.slug}`).fetch()
 
     const [prev, next] = await $content()
       .only(['title', 'slug', 'createdAt'])

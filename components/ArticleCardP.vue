@@ -25,7 +25,7 @@
           <div class="max-w-[300px] md:max-w-md">
             <div class="flex-auto p-4">
               <NuxtLink
-                :to="{ name: 'slug', params: { slug: blog.slug } }"
+                :to="{ name: 'p-slug', params: { slug: blog.slug } }"
                 class="interactable block mb-3 text-black font-bold dark:text-white hover:text-underline truncate md:whitespace-normal cursor-pointer"
                 data-type="link"
               >
@@ -33,7 +33,7 @@
               </NuxtLink>
               <NuxtLink
                 v-if="blog.subtitle"
-                :to="{ name: 'slug', params: { slug: blog.slug } }"
+                :to="{ name: 'p-slug', params: { slug: blog.slug } }"
                 class="interactable"
                 data-type="link"
               >
