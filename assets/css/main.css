@@ -13,14 +13,24 @@ figure img[lazy='loading'] {
 .dark-mode .light-img {
   display: none;
 }
+
 .dark-mode .dark-img {
   display: block;
 }
+
 .dark-img {
   display: none;
 }
+
 .light-img {
   display: block;
+}
+
+#table-of-content {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.875rem;
+  scroll-margin-top: 72px;
 }
 
 .nuxt-content {

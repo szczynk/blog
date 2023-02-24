@@ -15,6 +15,20 @@
         <IconChevronUp />
       </button>
     </div>
+
+    <div
+      class="ml-2 rounded-md cursor-pointer border bg-white text-gray-700 border-gray-800 dark:border-gray-300 dark:bg-gray-900 dark:text-gray-300 transition"
+    >
+      <NuxtLink
+        :to="'#table-of-content'"
+        role="button"
+        type="button"
+        class="p-2"
+        aria-label="scroll to table of content"
+      >
+        ToC
+      </NuxtLink>
+    </div>
   </div>
 </template>
 

@@ -55,7 +55,7 @@
         />
         <!-- eslint-enable -->
       </figure>
-      <nav v-if="blog.toc.length > 1" id="table-of-content">
+      <nav v-if="blog.toc.length > 1">
         <ul class="px-4 my-4">
           <li
             v-for="link of blog.toc"

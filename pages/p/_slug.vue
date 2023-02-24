@@ -55,7 +55,13 @@
         />
         <!-- eslint-enable -->
       </figure>
-      <nav v-if="blog.toc.length > 1" id="table-of-content">
+      <h2 id="table-of-content">
+        <a href="#table-of-content" aria-hidden="true" tabindex="-1">
+          <span class="icon icon-link"></span>
+        </a>
+        Table of Content
+      </h2>
+      <nav v-if="blog.toc.length > 1">
         <ul class="px-4 my-4">
           <li
             v-for="link of blog.toc"
