@@ -55,7 +55,7 @@
         />
         <!-- eslint-enable -->
       </figure>
-      <h2 id="table-of-content">
+      <h2 v-if="blog.toc.length > 1" id="table-of-content">
         <a href="#table-of-content" aria-hidden="true" tabindex="-1">
           <span class="icon icon-link"></span>
         </a>
