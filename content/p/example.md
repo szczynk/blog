@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'example'
 subtitle: ''
 lead: ''
 description: ''
@@ -11,6 +11,7 @@ cover:
 createdAt:
 updatedAt:
 tags:
+  - example
 ---
 
 ## Test

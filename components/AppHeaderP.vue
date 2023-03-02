@@ -8,7 +8,7 @@
       <div class="flex items-center justify-between h-16">
         <div class="lg:w-1/5 flex items-center pr-4" @click.stop="noop">
           <NuxtLink
-            :to="'/'"
+            :to="'/p'"
             class="interactable flex-shrink-0 flex-1 font-bold text-xl"
             :aria-label="`${$config.title} Logo`"
             data-type="link"

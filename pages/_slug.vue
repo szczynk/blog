@@ -39,13 +39,13 @@
         </NuxtLink>
       </div>
       <figure
-        v-if="blog.cover.thumb"
+        v-if="isCoverExisted"
         v-lazy-container="{ selector: 'img' }"
         class="my-4 w-full"
       >
         <img
-          :data-src="require(`@/assets/img/${blog.cover.thumb}`)"
-          :data-loading="require(`@/assets/img/${blog.cover.thumb}?lqip`)"
+          :data-src="coverThumb"
+          :data-loading="coverThumbLqip"
           :alt="blog.cover.alt ? blog.cover.alt : blog.title"
         />
         <!-- eslint-disable -->
@@ -118,6 +118,11 @@ export default {
       blog,
       prev,
       next,
+    }
+  },
+  data() {
+    return {
+      imgThumb: '',
     }
   },
   head() {
@@ -234,6 +239,21 @@ export default {
 
     return head
   },
+  computed: {
+    isCoverExisted() {
+      return this.imgThumb !== ''
+    },
+    coverThumb() {
+      return this.imgThumb !== ''
+        ? require(`@/assets/img/${this.imgThumb}`)
+        : ''
+    },
+    coverThumbLqip() {
+      return this.imgThumb !== ''
+        ? require(`@/assets/img/${this.imgThumb}?lqip`)
+        : ''
+    },
+  },
   mounted() {
     setTimeout(() => {
       const blocks = document.getElementsByClassName('nuxt-content-highlight')
@@ -244,6 +264,10 @@ export default {
         block.appendChild(component.$el)
       }
     }, 100)
+
+    if (this.blog.cover) {
+      this.imgThumb = this.blog.cover.thumb
+    }
   },
   methods: {
     sanitizeHtml,

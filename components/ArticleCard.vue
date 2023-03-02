@@ -7,18 +7,14 @@
         >
           <!-- article image -->
           <div
-            v-if="blog.cover.thumb"
+            v-if="isCoverExisted"
             v-lazy-container="{ selector: 'img' }"
             class="article-img"
           >
             <img
               class="rounded-l-lg shadow-md h-full w-[360px] md:w-[360px] lg:h-60"
-              :data-src="
-                require(`@/assets/img/${blog.cover.thumb}?resize&sizes[]=360`)
-              "
-              :data-loading="
-                require(`@/assets/img/${blog.cover.thumb}?resize&sizes[]=360&lqip`)
-              "
+              :data-src="coverThumb"
+              :data-loading="coverThumbLqip"
               :alt="blog.cover.alt ? blog.cover.alt : blog.title"
             />
           </div>
@@ -81,6 +77,31 @@ export default {
       type: Object,
       default: () => {},
     },
+  },
+  data() {
+    return {
+      imgThumb: '',
+    }
+  },
+  computed: {
+    isCoverExisted() {
+      return this.imgThumb !== ''
+    },
+    coverThumb() {
+      return this.imgThumb !== ''
+        ? require(`@/assets/img/${this.imgThumb}?resize&sizes[]=360`)
+        : ''
+    },
+    coverThumbLqip() {
+      return this.imgThumb !== ''
+        ? require(`@/assets/img/${this.imgThumb}?resize&sizes[]=360&lqip`)
+        : ''
+    },
+  },
+  mounted() {
+    if (this.blog.cover) {
+      this.imgThumb = this.blog.cover.thumb
+    }
   },
 }
 </script>

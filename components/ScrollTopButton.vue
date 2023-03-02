@@ -17,16 +17,15 @@
     </div>
 
     <div
+      v-if="toc"
       class="ml-2 rounded-md cursor-pointer border bg-white text-gray-700 border-gray-800 dark:border-gray-300 dark:bg-gray-900 dark:text-gray-300 transition"
     >
       <NuxtLink
         :to="'#table-of-content'"
-        role="button"
-        type="button"
-        class="p-2"
+        class="p-2 flex items-center justify-center"
         aria-label="scroll to table of content"
       >
-        ToC
+        <span>ToC</span>
       </NuxtLink>
     </div>
   </div>
@@ -36,6 +35,19 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  computed: {
+    toc() {
+      switch (this.$route.name) {
+        case 'p':
+          return false
+        case 'index':
+          return false
+        default:
+          return true
+      }
+    },
+  },
+
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
