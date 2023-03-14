@@ -1,11 +1,4 @@
 /*!
- * Vue.js v2.7.14
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
-
-
-/*!
  * Vue-Lazyload.js v1.3.4
  * (c) 2021 Awe <hilongjw@gmail.com>
  * Released under the MIT License.
@@ -41,6 +34,13 @@
 //! moment.js
 
 //! version : 0.5.40
+
+
+/*!
+ * Vue.js v2.7.14
+ * (c) 2014-2022 Evan You
+ * Released under the MIT License.
+ */
 
 
 /*!
