@@ -23,24 +23,9 @@
 
 
 /*!
- * clipboard.js v2.0.11
- * https://clipboardjs.com/
- *
- * Licensed MIT © Zeno Rocha
- */
-
-
-/*!
- * Vue-Lazyload.js v1.3.4
- * (c) 2021 Awe <hilongjw@gmail.com>
+ * Vue-Lazyload.js v3.0.0
+ * (c) 2023 Awe <hilongjw@gmail.com>
  * Released under the MIT License.
- */
-
-/*!
- * is-primitive <https://github.com/jonschlinkert/is-primitive>
- *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
  */
 
 /*!
@@ -66,6 +51,14 @@
 //! moment.js
 
 //! version : 0.5.40
+
+
+/*!
+ * clipboard.js v2.0.11
+ * https://clipboardjs.com/
+ *
+ * Licensed MIT © Zeno Rocha
+ */
 
 
 /*!
