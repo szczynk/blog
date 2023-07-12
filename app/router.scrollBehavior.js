@@ -6,7 +6,7 @@ function getMatchedComponents(route, matches = false, prop = 'components') {
         matches && matches.push(index)
         return m[prop][key]
       })
-    })
+    }),
   )
 }
 
@@ -63,7 +63,7 @@ export default function (to, from, savedPosition) {
             position = { selector: hash, behavior: 'smooth' }
             // Respect any scroll-margin-top set in CSS when scrolling to anchor
             const y = Number(
-              getComputedStyle(el)['scroll-margin-top']?.replace('px', '')
+              getComputedStyle(el)['scroll-margin-top']?.replace('px', ''),
             )
             if (y) {
               position.offset = { y }
@@ -72,7 +72,7 @@ export default function (to, from, savedPosition) {
         } catch (e) {
           // eslint-disable-next-line no-console
           console.warn(
-            'Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).'
+            'Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).',
           )
         }
       }

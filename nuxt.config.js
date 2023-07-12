@@ -117,7 +117,7 @@ export default {
           url: blog.path,
           priority: 0.6,
           lastmod: blog.updatedAt,
-        })
+        }),
       )
 
       // return all routes

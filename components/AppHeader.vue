@@ -142,7 +142,7 @@ export default {
               },
             },
           },
-          'https://giscus.app'
+          'https://giscus.app',
         )
       }
     },
