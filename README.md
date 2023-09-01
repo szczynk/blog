@@ -2,6 +2,11 @@
 
 Welcome to my personal blog, where I share my thoughts and experiences on a variety of topics. The blog is built using a modern technology stack consisting of Nuxt v2, @nuxt/content v1, @nuxtjs/color-mode, Vuejs v2, and Tailwindcss. It is hosted on GitHub Pages and uses Nuxt's static site generation (SSG) to transform markdown files into HTML pages.
 
+## Features
+
+- Public Hosted Blog with Github Pages
+- Private Local Blog with <http://localhost:3000/p>
+
 ## Installation
 
 To run this blog locally, follow the steps below:
