@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/p/tag/example", (function(a,b){return {data:[{tags:[{slug:b,title:b,subtitle:a,cover:{image:a,thumb:a,alt:a,caption:a},createdAt:"2023-10-16T01:07:35.429Z",tags:[b]}]}],fetch:{},mutations:void 0}}("","example")));
