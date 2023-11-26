@@ -1,19 +1,4 @@
 /*!
- * Vue.js v2.7.14
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
-
-
-/*!
- * clipboard.js v2.0.11
- * https://clipboardjs.com/
- *
- * Licensed MIT © Zeno Rocha
- */
-
-
-/*!
  * Vue-Lazyload.js v1.3.5
  * (c) 2023 Awe <hilongjw@gmail.com>
  * Released under the MIT License.
@@ -41,15 +26,8 @@
 
 //! moment.js
 
-//! version : 0.5.40
+//! version : 0.5.43
 
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <http://feross.org>
- * @license  MIT
- */
 
 /*!
  * clipboard.js v2.0.11
@@ -58,11 +36,9 @@
  * Licensed MIT © Zeno Rocha
  */
 
+
 /*!
- * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
- *
- * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Vue.js v2.7.15
+ * (c) 2014-2023 Evan You
  * Released under the MIT License.
  */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
