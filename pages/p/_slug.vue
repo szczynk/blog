@@ -49,10 +49,7 @@
           :alt="blog.cover.alt ? blog.cover.alt : blog.title"
         />
         <!-- eslint-disable -->
-        <figcaption
-          class="text-sm text-center"
-          v-html="sanitizeHtml(blog.cover.caption)"
-        />
+        <figcaption class="text-sm text-center" v-html="blog.cover.caption" />
         <!-- eslint-enable -->
       </figure>
       <h2 v-if="blog.toc.length > 1" id="table-of-content">
@@ -86,7 +83,6 @@
 </template>
 <script>
 import Vue from 'vue'
-import sanitizeHtml from 'sanitize-html'
 
 import AppCopyButton from '~/components/AppCopyButton'
 
@@ -142,9 +138,6 @@ export default {
     if (this.blog.cover) {
       this.imgThumb = this.blog.cover.thumb
     }
-  },
-  methods: {
-    sanitizeHtml,
   },
 }
 </script>

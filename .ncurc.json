@@ -6,7 +6,10 @@
     "imagemin-mozjpeg",
     "imagemin-svgo",
     "@nuxtjs/tailwindcss",
-    "webpack"
+    "webpack",
+    "vue",
+    "vue-lazyload",
+    "responsive-loader"
   ],
   "format": ["group"]
 }
