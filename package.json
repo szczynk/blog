@@ -27,7 +27,7 @@
   "dependencies": {
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/sitemap": "^5.0.1",
     "clipboard": "^2.0.11",
     "core-js": "^3.35.0",
     "nuxt": "^2.16.1",
