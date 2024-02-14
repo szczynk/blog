@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/p", (function(a,b){return {data:[{allBlogs:[{slug:b,title:b,subtitle:a,cover:{image:a,thumb:a,alt:a,caption:a},createdAt:"2024-02-14T00:12:53.320Z",tags:[b]}]}],fetch:{},mutations:void 0}}("","example")));
