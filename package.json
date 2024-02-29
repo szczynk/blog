@@ -40,7 +40,7 @@
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@babel/eslint-parser": "^7.23.10",
-    "@commitlint/cli": "^19.0.1",
+    "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^11.0.0",
