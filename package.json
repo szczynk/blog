@@ -65,7 +65,7 @@
     "prettier": "^3.2.5",
     "push-dir": "^0.4.1",
     "responsive-loader": "^2.3.0",
-    "sharp": "^0.32.6",
+    "sharp": "^0.33.3",
     "stylelint": "^14.13.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-vue": "^1.5.0",
