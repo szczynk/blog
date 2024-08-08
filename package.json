@@ -47,7 +47,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/stylelint-module": "^5.2.0",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^9.1.0",
