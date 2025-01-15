@@ -60,7 +60,7 @@
     "imagemin-svgo": "^9.0.0",
     "lint-staged": "^15.3.0",
     "lqip-loader": "^2.2.1",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "postcss-html": "^1.8.0",
     "prettier": "^3.4.2",
     "push-dir": "^0.4.1",
