@@ -62,7 +62,7 @@
     "lqip-loader": "^2.2.1",
     "postcss": "^8.5.1",
     "postcss-html": "^1.8.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.2",
     "push-dir": "^0.4.1",
     "responsive-loader": "^3.1.2",
     "sharp": "^0.32.6",
